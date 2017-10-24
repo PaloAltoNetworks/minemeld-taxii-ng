@@ -9,6 +9,9 @@ function TAXIINgSideConfigController($scope, MinemeldConfigService, MineMeldRunn
     // side config settings
     vm.verify_cert = undefined;
     vm.api_key = undefined;
+    vm.username = undefined;
+    vm.api_header = undefined;
+    vm.password = undefined;
 
     vm.loadSideConfig = function() {
         var nodename = $scope.$parent.vm.nodename;
@@ -68,10 +71,10 @@ function TAXIINgSideConfigController($scope, MinemeldConfigService, MineMeldRunn
         }
 
         if (vm.username) {
-            side_config.username = username;
+            side_config.username = vm.username;
         }
         if (vm.password) {
-            side_config.password = password;
+            side_config.password = vm.password;
         }
 
         if (typeof vm.verify_cert !== 'undefined') {
@@ -87,7 +90,7 @@ function TAXIINgSideConfigController($scope, MinemeldConfigService, MineMeldRunn
     vm.setAPIKey = function() {
         var mi = $modal.open({
             templateUrl: '/extensions/webui/taxiingWebui/taxiing.miner.sak.modal.html',
-            controller: ['$modalInstance', TAXIINgAPIKeyController],
+            controller: ['$modalInstance', 'fieldName', TAXIINgAPIKeyController],
             controllerAs: 'vm',
             bindToController: true,
             backdrop: 'static',
@@ -111,8 +114,8 @@ function TAXIINgSideConfigController($scope, MinemeldConfigService, MineMeldRunn
 
     vm.setAPIHeader = function() {
         var mi = $modal.open({
-            templateUrl: '/extensions/webui/taxiingWebui/taxiing.miner.susername.modal.html',
-            controller: ['$modalInstance', TAXIINgUsernameController],
+            templateUrl: '/extensions/webui/taxiingWebui/taxiing.miner.su.modal.html',
+            controller: ['$modalInstance', 'fieldName', TAXIINgUsernameController],
             controllerAs: 'vm',
             bindToController: true,
             backdrop: 'static',
@@ -123,7 +126,7 @@ function TAXIINgSideConfigController($scope, MinemeldConfigService, MineMeldRunn
         });
 
         mi.result.then((result) => {
-            vm.username = result.username;
+            vm.api_header = result.username;
 
             return vm.saveSideConfig().then((result) => {
                 toastr.success('API HEADER SET');
@@ -137,7 +140,7 @@ function TAXIINgSideConfigController($scope, MinemeldConfigService, MineMeldRunn
     vm.setPassword = function() {
         var mi = $modal.open({
             templateUrl: '/extensions/webui/taxiingWebui/taxiing.miner.sak.modal.html',
-            controller: ['$modalInstance', TAXIINgAPIKeyController],
+            controller: ['$modalInstance', 'fieldName', TAXIINgAPIKeyController],
             controllerAs: 'vm',
             bindToController: true,
             backdrop: 'static',
@@ -161,8 +164,8 @@ function TAXIINgSideConfigController($scope, MinemeldConfigService, MineMeldRunn
 
     vm.setUsername = function() {
         var mi = $modal.open({
-            templateUrl: '/extensions/webui/taxiingWebui/taxiing.miner.susername.modal.html',
-            controller: ['$modalInstance', TAXIINgUsernameController],
+            templateUrl: '/extensions/webui/taxiingWebui/taxiing.miner.su.modal.html',
+            controller: ['$modalInstance', 'fieldName', TAXIINgUsernameController],
             controllerAs: 'vm',
             bindToController: true,
             backdrop: 'static',

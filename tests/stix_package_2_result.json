@@ -1,0 +1,37 @@
+[
+    {
+        "indicator": "4849ab316b3dcde68a2a23c22dee2d98",
+        "type": "md5",
+        "share_level": "green",
+        "stix_package_title": "ser106.png: 4849ab316b3dcde68a2a23c22dee2d98",
+        "stix_package_description": "CERT-PA Analyzed file: ser106.png - MD5: 4849ab316b3dcde68a2a23c22dee2d98 - Permalink: https://infosec-lab.cert-pa.it/analyze/4849ab316b3dcde68a2a23c22dee2d98.html"
+    },
+    {
+        "indicator": "48827786029e0575687ee5f0707f7ebfc4ca2515",
+        "type": "sha1",
+        "share_level": "green",
+        "stix_package_title": "ser106.png: 4849ab316b3dcde68a2a23c22dee2d98",
+        "stix_package_description": "CERT-PA Analyzed file: ser106.png - MD5: 4849ab316b3dcde68a2a23c22dee2d98 - Permalink: https://infosec-lab.cert-pa.it/analyze/4849ab316b3dcde68a2a23c22dee2d98.html"
+    },
+    {
+        "indicator": "428558fcf4133715cf08d2fdf904b35f3c5e47dadbb5128b43785648688abfa1",
+        "type": "sha256",
+        "share_level": "green",
+        "stix_package_title": "ser106.png: 4849ab316b3dcde68a2a23c22dee2d98",
+        "stix_package_description": "CERT-PA Analyzed file: ser106.png - MD5: 4849ab316b3dcde68a2a23c22dee2d98 - Permalink: https://infosec-lab.cert-pa.it/analyze/4849ab316b3dcde68a2a23c22dee2d98.html"
+    },
+    {
+        "indicator": "http://essenza.co.id/ser106.png",
+        "type": "URL",
+        "share_level": "green",
+        "stix_package_title": "ser106.png: 4849ab316b3dcde68a2a23c22dee2d98",
+        "stix_package_description": "CERT-PA Analyzed file: ser106.png - MD5: 4849ab316b3dcde68a2a23c22dee2d98 - Permalink: https://infosec-lab.cert-pa.it/analyze/4849ab316b3dcde68a2a23c22dee2d98.html"
+    },
+    {
+        "indicator": "http://deversdesign.com/ser106.png",
+        "type": "URL",
+        "share_level": "green",
+        "stix_package_title": "ser106.png: 4849ab316b3dcde68a2a23c22dee2d98",
+        "stix_package_description": "CERT-PA Analyzed file: ser106.png - MD5: 4849ab316b3dcde68a2a23c22dee2d98 - Permalink: https://infosec-lab.cert-pa.it/analyze/4849ab316b3dcde68a2a23c22dee2d98.html"
+    }
+]

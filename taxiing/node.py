@@ -137,7 +137,7 @@ class Miner(BasePollerFT):
 
         try:
             r.raise_for_status()
-        except:
+        except Exception:
             LOG.debug(
                 '{} - exception in request: {!r} {!r}'.format(self.name, r.status_code, r.content)
             )
@@ -358,11 +358,6 @@ class Miner(BasePollerFT):
             cbegin = cend
 
     def _build_iterator(self, now):
-        if self.api_key is None:
-            raise RuntimeError(
-                '{} - API Key required and not set, poll not performed'.format(self.name)
-            )
-
         if self.poll_service is not None:
             discovered_poll_service = self.poll_service
         else:
@@ -414,5 +409,5 @@ class Miner(BasePollerFT):
 
         try:
             os.remove(side_config_path)
-        except:
+        except Exception:
             pass

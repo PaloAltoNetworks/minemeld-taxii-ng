@@ -1,0 +1,44 @@
+[
+    {
+        "indicator": "86927f4d92665747679ab72a9be87b05",
+        "share_level": "green",
+        "type": "md5",
+        "stix_package_title": "9hgfdfyr6: 86927f4d92665747679ab72a9be87b05",
+        "stix_package_description": "CERT-PA Analyzed file: 9hgfdfyr6 - MD5: 86927f4d92665747679ab72a9be87b05 - Permalink: https://infosec-lab.cert-pa.it/analyze/86927f4d92665747679ab72a9be87b05.html"
+    },
+    {
+        "indicator": "35549e85c4cb875e1710afaf274aeead50e06752",
+        "share_level": "green",
+        "type": "sha1",
+        "stix_package_title": "9hgfdfyr6: 86927f4d92665747679ab72a9be87b05",
+        "stix_package_description": "CERT-PA Analyzed file: 9hgfdfyr6 - MD5: 86927f4d92665747679ab72a9be87b05 - Permalink: https://infosec-lab.cert-pa.it/analyze/86927f4d92665747679ab72a9be87b05.html"
+    },
+    {
+        "indicator": "33b62b95281bb0ecbad2523bb99e4853fd516044b8f2b42ef4a1e29903e7bd0f",
+        "share_level": "green",
+        "type": "sha256",
+        "stix_package_title": "9hgfdfyr6: 86927f4d92665747679ab72a9be87b05",
+        "stix_package_description": "CERT-PA Analyzed file: 9hgfdfyr6 - MD5: 86927f4d92665747679ab72a9be87b05 - Permalink: https://infosec-lab.cert-pa.it/analyze/86927f4d92665747679ab72a9be87b05.html"
+    },
+    {
+        "indicator": "http://ilibarcelos.pt/9hgfdfyr6",
+        "share_level": "green",
+        "type": "URL",
+        "stix_package_title": "9hgfdfyr6: 86927f4d92665747679ab72a9be87b05",
+        "stix_package_description": "CERT-PA Analyzed file: 9hgfdfyr6 - MD5: 86927f4d92665747679ab72a9be87b05 - Permalink: https://infosec-lab.cert-pa.it/analyze/86927f4d92665747679ab72a9be87b05.html"
+    },
+    {
+        "indicator": "http://mrscrowe.net/p66/9hgfdfyr6",
+        "share_level": "green",
+        "type": "URL",
+        "stix_package_title": "9hgfdfyr6: 86927f4d92665747679ab72a9be87b05",
+        "stix_package_description": "CERT-PA Analyzed file: 9hgfdfyr6 - MD5: 86927f4d92665747679ab72a9be87b05 - Permalink: https://infosec-lab.cert-pa.it/analyze/86927f4d92665747679ab72a9be87b05.html"
+    },
+    {
+        "indicator": "http://www.gtCartographic.co.uk/9hgfdfyr6",
+        "share_level": "green",
+        "type": "URL",
+        "stix_package_title": "9hgfdfyr6: 86927f4d92665747679ab72a9be87b05",
+        "stix_package_description": "CERT-PA Analyzed file: 9hgfdfyr6 - MD5: 86927f4d92665747679ab72a9be87b05 - Permalink: https://infosec-lab.cert-pa.it/analyze/86927f4d92665747679ab72a9be87b05.html"
+    }
+]

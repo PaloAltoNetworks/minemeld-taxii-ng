@@ -7,4 +7,4 @@ def prototypes():
 def webui_blueprint():
     from minemeld.flask import aaa
 
-    return aaa.MMBlueprint('ctaWebui', __name__, static_folder='webui', static_url_path='')
+    return aaa.MMBlueprint('taxiingWebui', __name__, static_folder='webui', static_url_path='')

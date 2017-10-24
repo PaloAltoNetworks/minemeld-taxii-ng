@@ -35,8 +35,8 @@ def poll_request(
     if message_id is None:
         message_id = new_message_id()
 
-    exclusive_begin_timestamp=exclusive_begin_timestamp.strftime(TAXII_DT_FORMAT)
-    inclusive_end_timestamp=inclusive_end_timestamp.strftime(TAXII_DT_FORMAT)
+    exclusive_begin_timestamp = exclusive_begin_timestamp.strftime(TAXII_DT_FORMAT)
+    inclusive_end_timestamp = inclusive_end_timestamp.strftime(TAXII_DT_FORMAT)
 
     result = [
         '<taxii_11:Poll_Request xmlns:taxii_11="http://taxii.mitre.org/messages/taxii_xml_binding-1.1"',

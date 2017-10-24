@@ -1,0 +1,9 @@
+[
+    {
+        "indicator": "http://bit.ly/2sy2lFx",
+        "type": "URL",
+        "share_level": "white",
+        "stix_title": "URL: http://bit.ly/2sy2lFx...",
+        "stix_description": "URL: http://bit.ly/2sy2lFx| isOnline:yes| dateVerified:2017-10-23T16:05:57+00:00"
+    }
+]

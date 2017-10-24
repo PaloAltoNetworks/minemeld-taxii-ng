@@ -88,7 +88,7 @@
 </div>
 <div class="row">
     <div class="col-sm-6 col-md-6">
-        <table class="table table-condensed nodedetail-info-table" ng-controller="CTASideConfigController as sideConfig">
+        <table class="table table-condensed nodedetail-info-table" ng-controller="TAXIINgSideConfigController as sideConfig">
             <colgroup>
                 <col style="width: 30%">
                 <col>
@@ -98,7 +98,7 @@
                     <td>API HEADER</td>
                     <td tooltip="set api header" class="nodedetail-info-clickable" ng-click="sideConfig.setAPIHeader()">
                         <span ng-if="!sideConfig.api_header"><em>Not set</em></span>
-                        <span ng-if="sideConfig.api_header">{{ vm.api_header }}</span>
+                        <span ng-if="sideConfig.api_header">{{ sideConfig.api_header }}</span>
                     </td>
                 </tr>
                 <tr>
@@ -110,14 +110,14 @@
                 </tr>
                 <tr>
                     <td>USERNAME</td>
-                    <td tooltip="set api header" class="nodedetail-info-clickable" ng-click="sideConfig.setUsername()">
+                    <td tooltip="set username" class="nodedetail-info-clickable" ng-click="sideConfig.setUsername()">
                         <span ng-if="!sideConfig.username"><em>Not set</em></span>
-                        <span ng-if="sideConfig.username">{{ vm.username }}</span>
+                        <span ng-if="sideConfig.username">{{ sideConfig.username }}</span>
                     </td>
                 </tr>
                 <tr>
                     <td>PASSWORD</td>
-                    <td tooltip="set api key" class="nodedetail-info-clickable" ng-click="sideConfig.setPassword()">
+                    <td tooltip="set password" class="nodedetail-info-clickable" ng-click="sideConfig.setPassword()">
                         <span ng-if="!sideConfig.password"><em>Not set</em></span>
                         <span ng-if="sideConfig.password" class="label label-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span>
                     </td>
