@@ -1,0 +1,20 @@
+description: >
+    New TAXII Miner
+url: https://github.com/PaloAltoNetworks/minemeld-taxii-ng
+
+prototypes:
+    phishtank:
+        author: MineMeld Core Team
+        description: >
+            Test feed from Hail A TAXII test site.
+        class: taxiing.Miner
+        development_status: EXPERIMENTAL
+        node_type: miner
+        tags: []
+        indicator_types:
+            - any
+        config:
+            discovery_service:  http://hailataxii.com/taxii-discovery-service
+            collection: guest.phishtank_com
+            username: guest
+            password: guest

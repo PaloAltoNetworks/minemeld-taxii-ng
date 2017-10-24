@@ -1,0 +1,19 @@
+{
+    "version": "0.1b1",
+    "name": "minemeld-taxii-ng",
+    "author": "Palo Alto Networks",
+    "author_email": "techbizdev@paloaltonetworks.com",
+    "description": "MineMeld NG Miner for TAXII feeds",
+    "entry_points": {
+        "minemeld_nodes": {
+            "taxiing.Miner": "taxiing.node:Miner"
+        },
+        "minemeld_prototypes": {
+            "taxiing.prototypes": "taxiing:prototypes"
+        },
+        "minemeld_webui": {
+            "taxiingWebui": "taxiing:webui_blueprint"
+        }
+    },
+    "manifest_version": 0
+}
