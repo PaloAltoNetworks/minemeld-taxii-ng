@@ -1,0 +1,288 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
+	xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2"
+	xmlns:marking="http://data-marking.mitre.org/Marking-1"
+	xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:CERTPA="https://www.cert-pa.it"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.1/File_Object.xsd
+	http://cybox.mitre.org/objects#URIObject-2 http://cybox.mitre.org/XMLSchema/objects/URI/2.1/URI_Object.xsd
+	http://data-marking.mitre.org/Marking-1 http://stix.mitre.org/XMLSchema/data_marking/1.1.1/data_marking.xsd
+	http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1 http://stix.mitre.org/XMLSchema/extensions/marking/tlp/1.1.1/tlp_marking.xsd
+	http://stix.mitre.org/Indicator-2 http://stix.mitre.org/XMLSchema/indicator/2.1.1/indicator.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd" id="CERTPA:Package-d6733744-a9a2-4799-a77e-34f0960782e7" version="1.1.1" timestamp="2017-10-24T15:42:01.912852+00:00">
+    <stix:STIX_Header>
+        <stix:Title>Titolo Lista</stix:Title>
+        <stix:Description>Descrizione Lista</stix:Description>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>//node() | //@*</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="GREEN"/>
+            </marking:Marking>
+        </stix:Handling>
+        <stix:Information_Source>
+            <stixCommon:Identity>
+                <stixCommon:Name>CERT-PA - AgID</stixCommon:Name>
+            </stixCommon:Identity>
+        </stix:Information_Source>
+    </stix:STIX_Header>
+    <stix:Indicators>
+        <stix:Indicator id="CERTPA:indicator-d5664cee-c2b2-421f-b481-7d0941bb9191" timestamp="2017-10-24T15:42:01.912971+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Titolo Lista</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Domain Watchlist</indicator:Type>
+            <indicator:Observable id="CERTPA:Observable-d679090b-9c1d-46fa-9df5-dfc8a5e7f508">
+                <cybox:Observable_Composition operator="OR">
+                    <cybox:Observable id="CERTPA:Observable-e8618961-4a9a-48a0-945d-5d2a2ddefc15">
+                        <cybox:Object id="CERTPA:URI-6c532160-929c-489d-b9ad-edd4827de9b4">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
+                                <URIObj:Value>www.pinuccetto.com</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Related_Objects>
+                                <cybox:Related_Object id="CERTPA:File-21257a2c-7174-490c-8e87-56809ae61993">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value>2bbbb520e5c7129f24491d4a6c80df1f</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                    <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                                </cybox:Related_Object>
+                            </cybox:Related_Objects>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="CERTPA:Observable-f10e0ac7-3bf2-40b7-9f40-8316768abea0">
+                        <cybox:Object id="CERTPA:URI-72e6513e-a3bb-4f7b-ac3d-8435cd3e450d">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
+                                <URIObj:Value>pino.url</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Related_Objects>
+                                <cybox:Related_Object id="CERTPA:File-228c262f-db24-431e-86a8-b3fe2c0932d0">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value>5254ad8a9634da8e4b48ca18727caa7e</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                    <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                                </cybox:Related_Object>
+                                <cybox:Related_Object id="CERTPA:File-c96d20f6-d6b4-4d20-adcf-6f12154c207f">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value>10ab2e7b547bbbe7fc76d659165e95ce</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                    <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                                </cybox:Related_Object>
+                                <cybox:Related_Object id="CERTPA:File-83d4a7df-adcd-4d6b-8f67-ac07ee77d31b">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value>954eaa749f5f945e14a56f52a188f449</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                    <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                                </cybox:Related_Object>
+                            </cybox:Related_Objects>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="CERTPA:Observable-b4e0313b-84b7-46dd-abd7-2ef9935c24f0">
+                        <cybox:Object id="CERTPA:URI-c56e959e-dbf4-4ad4-b918-537d88931f10">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
+                                <URIObj:Value>www.scarfacerythm.com</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Related_Objects>
+                                <cybox:Related_Object id="CERTPA:File-e9df359f-e73d-4a37-a2a1-124be2946aec">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value>574b6291056e7b0a466c75e79d00fad1</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                    <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                                </cybox:Related_Object>
+                                <cybox:Related_Object id="CERTPA:File-6394d315-a7a2-460f-beee-086188ff70c3">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value>a2aed8c9f19b1f25a0adbef06071a9ca</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                    <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                                </cybox:Related_Object>
+                                <cybox:Related_Object id="CERTPA:File-11823add-f743-42c0-b538-138f5bbec526">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value>aea474acdcd38dd1e977d18d71b42a3b</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                    <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                                </cybox:Related_Object>
+                                <cybox:Related_Object id="CERTPA:File-2379b0e3-5720-4573-a665-084d25905329">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value>b7d598174f269019592dfadf98741f54</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                    <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                                </cybox:Related_Object>
+                            </cybox:Related_Objects>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="CERTPA:Observable-084ce6e9-2429-4df0-ba8e-8390eca32542">
+                        <cybox:Object id="CERTPA:URI-7d831def-edb2-47eb-9d8d-d90f302de2de">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
+                                <URIObj:Value>pinotto.url</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Related_Objects>
+                                <cybox:Related_Object id="CERTPA:File-e8f0d905-253c-4c2f-8eec-843c2b910c6e">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value>2bbbb520e5c7129f24491d4a6c80df1f</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                    <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                                </cybox:Related_Object>
+                            </cybox:Related_Objects>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="CERTPA:Observable-7bb81d72-648b-4424-83c0-6343c9a1467e">
+                        <cybox:Object id="CERTPA:URI-ba44655b-f87c-4f23-b910-7a2fdadaec8b">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
+                                <URIObj:Value>titiueq.bid</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Related_Objects>
+                                <cybox:Related_Object id="CERTPA:File-84f91376-b845-4bb6-ba39-3efb6a2ee9bc">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value>b2b003f9fd947c71536bced7f491947f</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                    <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                                </cybox:Related_Object>
+                            </cybox:Related_Objects>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="CERTPA:Observable-5d9944a3-8133-4e9e-bd16-9045f5fc79a2">
+                        <cybox:Object id="CERTPA:URI-faed1bb6-dd6d-48e4-aec9-3a95f5ba941a">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
+                                <URIObj:Value>pinos.com</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Related_Objects>
+                                <cybox:Related_Object id="CERTPA:File-7fba2032-c99c-49e3-a494-ff78c296f460">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value>2bbbb520e5c7129f24491d4a6c80df1f</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                    <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                                </cybox:Related_Object>
+                            </cybox:Related_Objects>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="CERTPA:Observable-1d8e1772-3019-469c-b614-5fe9f41a27d0">
+                        <cybox:Object id="CERTPA:URI-6183530c-9d10-4720-a48b-25fca189b81b">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
+                                <URIObj:Value>www.pinuccio.com</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Related_Objects>
+                                <cybox:Related_Object id="CERTPA:File-8fde2361-ae9d-4650-9330-c1f86080d773">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value>c24a08bfeb09c9842b8e6578d7b0b721</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                    <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                                </cybox:Related_Object>
+                            </cybox:Related_Objects>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="CERTPA:Observable-59b23559-c15b-4db3-9759-e88adc6c7f32">
+                        <cybox:Object id="CERTPA:URI-f18ddb39-f80d-4d0b-ad76-f4781dbd2219">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
+                                <URIObj:Value>pino.com</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Related_Objects>
+                                <cybox:Related_Object id="CERTPA:File-ef878d32-22e7-4976-83cb-656f24698310">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value>954eaa749f5f945e14a56f52a188f449</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                    <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                                </cybox:Related_Object>
+                            </cybox:Related_Objects>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="CERTPA:Observable-0aa7688b-1a49-4266-8b69-84c3e7ef3d4c">
+                        <cybox:Object id="CERTPA:URI-44adf9dc-68a7-4119-91f0-1246fc6f6785">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
+                                <URIObj:Value>terrasses-de-santeny.com</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Related_Objects>
+                                <cybox:Related_Object id="CERTPA:File-46739348-7d7f-4a64-b599-3f5884d5ff14">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value>f3443f0a0582171901df76c68c12c11d</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                    <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                                </cybox:Related_Object>
+                            </cybox:Related_Objects>
+                        </cybox:Object>
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>
+

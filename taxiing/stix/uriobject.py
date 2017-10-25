@@ -1,6 +1,10 @@
 def decode(props):
     utype = props.get('type', 'URL')
-    if utype != 'URL':
+    if utype == 'URL':
+        type_ = 'URL'
+    elif utype == 'Domain Name':
+        type_ = 'domain'
+    else:
         return []
 
     url = props.find('Value')
@@ -9,5 +13,5 @@ def decode(props):
 
     return [{
         'indicator': url.string.encode('ascii', 'replace'),
-        'type': 'URL'
+        'type': type_
     }]

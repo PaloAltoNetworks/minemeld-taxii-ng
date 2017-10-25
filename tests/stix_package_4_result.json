@@ -1,0 +1,142 @@
+[
+    {
+        "stix_package_title": "Titolo Lista",
+        "stix_package_description": "Descrizione Lista",
+        "indicator": "www.pinuccetto.com",
+        "share_level": "green",
+        "type": "domain"
+    },
+    {
+        "stix_package_title": "Titolo Lista",
+        "stix_package_description": "Descrizione Lista",
+        "indicator": "2bbbb520e5c7129f24491d4a6c80df1f",
+        "share_level": "green",
+        "type": "md5"
+    },
+    {
+        "stix_package_title": "Titolo Lista",
+        "stix_package_description": "Descrizione Lista",
+        "indicator": "pino.url",
+        "share_level": "green",
+        "type": "domain"
+    },
+    {
+        "stix_package_title": "Titolo Lista",
+        "stix_package_description": "Descrizione Lista",
+        "indicator": "5254ad8a9634da8e4b48ca18727caa7e",
+        "share_level": "green",
+        "type": "md5"
+    },
+    {
+        "stix_package_title": "Titolo Lista",
+        "stix_package_description": "Descrizione Lista",
+        "indicator": "10ab2e7b547bbbe7fc76d659165e95ce",
+        "share_level": "green",
+        "type": "md5"
+    },
+    {
+        "stix_package_title": "Titolo Lista",
+        "stix_package_description": "Descrizione Lista",
+        "indicator": "954eaa749f5f945e14a56f52a188f449",
+        "share_level": "green",
+        "type": "md5"
+    },
+    {
+        "stix_package_title": "Titolo Lista",
+        "stix_package_description": "Descrizione Lista",
+        "indicator": "www.scarfacerythm.com",
+        "share_level": "green",
+        "type": "domain"
+    },
+    {
+        "stix_package_title": "Titolo Lista",
+        "stix_package_description": "Descrizione Lista",
+        "indicator": "574b6291056e7b0a466c75e79d00fad1",
+        "share_level": "green",
+        "type": "md5"
+    },
+    {
+        "stix_package_title": "Titolo Lista",
+        "stix_package_description": "Descrizione Lista",
+        "indicator": "a2aed8c9f19b1f25a0adbef06071a9ca",
+        "share_level": "green",
+        "type": "md5"
+    },
+    {
+        "stix_package_title": "Titolo Lista",
+        "stix_package_description": "Descrizione Lista",
+        "indicator": "aea474acdcd38dd1e977d18d71b42a3b",
+        "share_level": "green",
+        "type": "md5"
+    },
+    {
+        "stix_package_title": "Titolo Lista",
+        "stix_package_description": "Descrizione Lista",
+        "indicator": "b7d598174f269019592dfadf98741f54",
+        "share_level": "green",
+        "type": "md5"
+    },
+    {
+        "stix_package_title": "Titolo Lista",
+        "stix_package_description": "Descrizione Lista",
+        "indicator": "pinotto.url",
+        "share_level": "green",
+        "type": "domain"
+    },
+    {
+        "stix_package_title": "Titolo Lista",
+        "stix_package_description": "Descrizione Lista",
+        "indicator": "titiueq.bid",
+        "share_level": "green",
+        "type": "domain"
+    },
+    {
+        "stix_package_title": "Titolo Lista",
+        "stix_package_description": "Descrizione Lista",
+        "indicator": "b2b003f9fd947c71536bced7f491947f",
+        "share_level": "green",
+        "type": "md5"
+    },
+    {
+        "stix_package_title": "Titolo Lista",
+        "stix_package_description": "Descrizione Lista",
+        "indicator": "pinos.com",
+        "share_level": "green",
+        "type": "domain"
+    },
+    {
+        "stix_package_title": "Titolo Lista",
+        "stix_package_description": "Descrizione Lista",
+        "indicator": "www.pinuccio.com",
+        "share_level": "green",
+        "type": "domain"
+    },
+    {
+        "stix_package_title": "Titolo Lista",
+        "stix_package_description": "Descrizione Lista",
+        "indicator": "c24a08bfeb09c9842b8e6578d7b0b721",
+        "share_level": "green",
+        "type": "md5"
+    },
+    {
+        "stix_package_title": "Titolo Lista",
+        "stix_package_description": "Descrizione Lista",
+        "indicator": "pino.com",
+        "share_level": "green",
+        "type": "domain"
+    },
+    {
+        "stix_package_title": "Titolo Lista",
+        "stix_package_description": "Descrizione Lista",
+        "indicator": "terrasses-de-santeny.com",
+        "share_level": "green",
+        "type": "domain"
+    },
+    {
+        "stix_package_title": "Titolo Lista",
+        "stix_package_description": "Descrizione Lista",
+        "indicator": "f3443f0a0582171901df76c68c12c11d",
+        "share_level": "green",
+        "type": "md5"
+    }
+]

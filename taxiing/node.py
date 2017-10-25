@@ -85,15 +85,24 @@ class Miner(BasePollerFT):
             LOG.error('%s - Error loading side config: %s', self.name, str(e))
             return
 
-        self.api_key = sconfig.get('api_key', None)
-        self.api_header = sconfig.get('api_header', None)
-        if self.api_key is not None and self.api_header is not None:
+        api_key = sconfig.get('api_key', None)
+        api_header = sconfig.get('api_header', None)
+        if api_key is not None and api_header is not None:
+            self.api_key = api_key
+            self.api_header = api_header
             LOG.info('{} - Loaded API credentials from side config'.format(self.name))
 
-        self.username = sconfig.get('username', None)
-        self.password = sconfig.get('password', None)
-        if self.username is not None and self.password is not None:
+        username = sconfig.get('username', None)
+        password = sconfig.get('password', None)
+        if username is not None and password is not None:
+            self.username = username
+            self.password = password
             LOG.info('{} - Loaded Basic authentication credentials from side config'.format(self.name))
+
+        verify_cert = sconfig.get('verify_cert', None)
+        if verify_cert is not None:
+            self.verify_cert = verify_cert
+            LOG.info('{} - Loaded verify cert from side config'.format(self.name))
 
     def _saved_state_restore(self, saved_state):
         super(Miner, self)._saved_state_restore(saved_state)

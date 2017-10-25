@@ -30,6 +30,15 @@ def object_extract_properties(props):
     return DECODERS[type_](props)
 
 
+def _deduplicate(indicators):
+    result = {}
+
+    for iv in indicators:
+        result['{}:{}'.format(iv['indicator'], iv['type'])] = iv
+
+    return result.values()
+
+
 def decode(content):
     result = []
 
@@ -75,4 +84,4 @@ def decode(content):
                     r.update(pprops)
                     result.append(r)
 
-    return result
+    return _deduplicate(result)
