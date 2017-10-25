@@ -12,8 +12,8 @@ from lxml import etree
 from minemeld.ft.basepoller import BasePollerFT
 from minemeld.ft.utils import dt_to_millisec, interval_in_sec
 
-from . import taxii11
-from . import stixdecoder
+from .taxii import v11 as taxii11
+from .stix import decode as stix_decode
 
 LOG = logging.getLogger(__name__)
 
@@ -55,12 +55,10 @@ class Miner(BasePollerFT):
         self.poll_service = self.config.get('poll_service', None)
         self.collection = self.config.get('collection', None)
 
-        self.side_config_path = self.config.get('side_config', None)
-        if self.side_config_path is None:
-            self.side_config_path = os.path.join(
-                os.environ['MM_CONFIG_DIR'],
-                '%s_side_config.yml' % self.name
-            )
+        self.side_config_path = os.path.join(
+            os.environ['MM_CONFIG_DIR'],
+            '%s_side_config.yml' % self.name
+        )
 
         self.prefix = self.config.get('prefix', self.name)
 
@@ -113,7 +111,14 @@ class Miner(BasePollerFT):
         self.last_taxii_run = None
 
     def _process_item(self, item):
-        return [[item.pop('indicator'), item]]
+        indicator = item.pop('indicator')
+        value = {}
+        for k, v in item.iteritems():
+            if k.startswith('stix_'):
+                k = self.prefix + k[4:]
+            value[k] = v
+
+        return [[indicator, value]]
 
     def _send_request(self, url, headers, data, stream=False):
         if self.api_key is not None and self.api_header is not None:
@@ -307,7 +312,7 @@ class Miner(BasePollerFT):
 
                                 content = etree.tostring(c[0], encoding='unicode')
 
-                                for indicator in stixdecoder.decode(content):
+                                for indicator in stix_decode(content):
                                     yield indicator
 
                         element.clear()

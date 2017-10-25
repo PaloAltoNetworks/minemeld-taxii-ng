@@ -22,7 +22,7 @@ from unittest import TestCase
 from nose.tools import assert_items_equal
 from parameterized import parameterized
 
-import taxiing.stixdecoder
+import taxiing.stix
 
 TestCase.maxDiff = None
 MYDIR = os.path.dirname(__file__)
@@ -38,13 +38,11 @@ def load_stix_vectors():
         lambda x: x.startswith('stix_package_'),
         testfiles
     )
-    print testfiles
 
     testfiles = filter(
         lambda x: os.path.isfile(os.path.join(MYDIR, stix_results_file(x))),
         testfiles
     )
-    print testfiles
 
     print 'Loaded {} STIX test packages'.format(len(testfiles))
 
@@ -60,6 +58,6 @@ def test_stixdecoder(testfile):
         results = json.load(f)
 
     assert_items_equal(
-        taxiing.stixdecoder.decode(spackage),
+        taxiing.stix.decode(spackage),
         results
     )
