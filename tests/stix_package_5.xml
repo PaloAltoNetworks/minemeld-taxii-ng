@@ -1,0 +1,230 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
+	xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2"
+	xmlns:marking="http://data-marking.mitre.org/Marking-1"
+	xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:CERTPA="https://www.cert-pa.it"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.1/File_Object.xsd
+	http://cybox.mitre.org/objects#URIObject-2 http://cybox.mitre.org/XMLSchema/objects/URI/2.1/URI_Object.xsd
+	http://data-marking.mitre.org/Marking-1 http://stix.mitre.org/XMLSchema/data_marking/1.1.1/data_marking.xsd
+	http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1 http://stix.mitre.org/XMLSchema/extensions/marking/tlp/1.1.1/tlp_marking.xsd
+	http://stix.mitre.org/Indicator-2 http://stix.mitre.org/XMLSchema/indicator/2.1.1/indicator.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd" id="CERTPA:Package-fd76471e-db0c-4b6b-9568-d797dccf8181" version="1.1.1" timestamp="2017-10-25T12:18:42.713973+00:00">
+    <stix:STIX_Header>
+        <stix:Title>BadRabbit5.exe: fbbdc39af1139aebba4da004475e8839</stix:Title>
+        <stix:Description>CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html</stix:Description>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>//node() | //@*</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="GREEN"/>
+            </marking:Marking>
+        </stix:Handling>
+        <stix:Information_Source>
+            <stixCommon:Identity>
+                <stixCommon:Name>CERT-PA - AgID</stixCommon:Name>
+            </stixCommon:Identity>
+        </stix:Information_Source>
+    </stix:STIX_Header>
+    <stix:Indicators>
+        <stix:Indicator id="CERTPA:indicator-89be5711-fa6d-4cb7-84a7-5c235bde6810" timestamp="2017-10-25T12:18:42.719820+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>BadRabbit5.exe: fbbdc39af1139aebba4da004475e8839</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+            <indicator:Observable id="CERTPA:Observable-8bbaa393-847a-4494-a246-2cd9d5f14e04">
+                <cybox:Object id="CERTPA:File-4d82fc03-8c51-45f7-8dc0-5ec26fc2af44">
+                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                        <FileObj:File_Name>BadRabbit5.exe</FileObj:File_Name>
+                        <FileObj:Size_In_Bytes>441899</FileObj:Size_In_Bytes>
+                        <FileObj:File_Format>PE32 executable (console) Intel 80386, for MS Windows</FileObj:File_Format>
+                        <FileObj:Hashes>
+                            <cyboxCommon:Hash>
+                                <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                <cyboxCommon:Simple_Hash_Value>fbbdc39af1139aebba4da004475e8839</cyboxCommon:Simple_Hash_Value>
+                            </cyboxCommon:Hash>
+                            <cyboxCommon:Hash>
+                                <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+                                <cyboxCommon:Simple_Hash_Value>de5c8d858e6e41da715dca1c019df0bfb92d32c0</cyboxCommon:Simple_Hash_Value>
+                            </cyboxCommon:Hash>
+                            <cyboxCommon:Hash>
+                                <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA256</cyboxCommon:Type>
+                                <cyboxCommon:Simple_Hash_Value>630325cac09ac3fab908f903e3b00d0dadd5fdaa0875ed8496fcbb97a558d0da</cyboxCommon:Simple_Hash_Value>
+                            </cyboxCommon:Hash>
+                        </FileObj:Hashes>
+                    </cybox:Properties>
+                    <cybox:Related_Objects>
+                        <cybox:Related_Object id="CERTPA:URI-8aada52d-c647-467d-bc94-38920e49d988">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://1dnscontrol.com/flash_install.php</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-c6e10e73-d49f-48ac-bbef-c77775ac44ba">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://ankerch-crimea.ru</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-8d7950ff-54ec-4a70-94eb-b1a9de041b21">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://bg.pensionhotel.com</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-e73cf414-be4f-4103-9469-abf3ed1617f0">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://i24.com.ua</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-0bc43cc4-50a2-462b-99c9-3a55e8d7e24c">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://novayagazeta.spb.ru</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-99a9eb64-d331-4c04-b0ff-a7e4bf56030d">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://www.imer.ro</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-44548c52-74e7-4d97-9691-b6fe23a9c56f">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://www.online812.ru</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-5fd9df84-9b8d-449d-a3db-a9f9dd5a72f2">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://www.pensionhotel.cz</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-c8c1b314-1acc-40ea-a800-dcea496b9fb3">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://www.grupovo.bg</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-85f6d97a-a5e8-4c92-a59d-da16ef63db76">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://calendar.fontanka.ru</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-b7f51b20-58af-4648-966c-b2af3d587635">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://www.otbrana.com</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-4d0c5962-20a9-45d6-ae79-a6f1dcadf9e0">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://osvitaportal.com.ua</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-0bcf58c2-ea21-42c6-93b9-03af58256f46">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://most-dnepr.info</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-3dce8b71-3719-4cac-b1d8-9c690434b6ee">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://www.t.ks.ua</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-9e5802f7-1ce7-49ee-8ea9-91b37a99009c">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://an-crimea.ru</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-bf402021-42b4-4cbf-b324-6e299dfa964a">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://blog.fontanka.ru</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-c39ffb2f-8b29-4ef5-85c6-a934f2632f07">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://www.mediaport.ua</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-2cd69342-bbcf-40ee-8f93-fbe4f6a4df6b">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://argumenti.ru</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-da561a94-df15-4993-8445-af7cca0e8a93">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://spbvoditel.ru</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-b66023b6-8808-4152-8041-68ad3f6c20cb">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://www.aica.co.jp</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-c5f76271-3e27-47ba-8a8d-7ac741b39d4d">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://www.sinematurk.com</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-b55be037-9d2c-4229-b084-812a30b3d7fe">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://grupovo.bg</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-6ad4b477-2585-4558-a824-a06ff2371d93">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://www.fontanka.ru</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-d926f9b3-d8d4-4a16-ba0e-eeab12f9d742">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://argumentiru.com</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-e3c0d4d5-522b-4a4d-8b6b-95f72cfd7bd5">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://185.149.120.3</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                        <cybox:Related_Object id="CERTPA:URI-8bc467e4-4ac2-4608-b0f9-1fc11bb105bb">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://185.149.120.3/scholargoogle/</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                    </cybox:Related_Objects>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>
+
