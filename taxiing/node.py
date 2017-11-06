@@ -22,6 +22,7 @@ class Miner(BasePollerFT):
     def __init__(self, name, chassis, config):
         self.discovered_poll_service = None
         self.last_taxii_run = None
+        self.last_stix_package_ts = None
         self.api_key = None
 
         super(Miner, self).__init__(name, chassis, config)
@@ -144,6 +145,8 @@ class Miner(BasePollerFT):
         if self.username is not None and self.password is not None:
             rkwargs['auth'] = (self.username, self.password)
 
+        LOG.debug('{} - request to {!r}: {!r}'.format(self.name, url, rkwargs))
+
         r = requests.post(
             url,
             **rkwargs
@@ -173,7 +176,10 @@ class Miner(BasePollerFT):
     def _discover_poll_service(self):
         # let's start from discovering the available services
         req = taxii11.discovery_request()
-        reqhdrs = taxii11.headers()
+        LOG.debug('protocol {!r}'.format(self.discovery_service.split(':', 1)[0]))
+        reqhdrs = taxii11.headers(
+            protocol=self.discovery_service.split(':', 1)[0]
+        )
         result = self._send_request(
             url=self.discovery_service,
             headers=reqhdrs,
@@ -222,7 +228,9 @@ class Miner(BasePollerFT):
 
         # from here we look for the correct poll service
         req = taxii11.collection_information_request()
-        reqhdrs = taxii11.headers()
+        reqhdrs = taxii11.headers(
+            protocol=selected_coll_service.split(':', 1)[0]
+        )
         result = self._send_request(
             url=selected_coll_service,
             headers=reqhdrs,
@@ -276,7 +284,9 @@ class Miner(BasePollerFT):
             inclusive_end_timestamp=end
         )
         LOG.debug('{} - poll request: {}'.format(self.name, req))
-        reqhdrs = taxii11.headers()
+        reqhdrs = taxii11.headers(
+            protocol=poll_service.split(':', 1)[0]
+        )
         result = self._send_request(
             url=poll_service,
             headers=reqhdrs,
@@ -290,7 +300,7 @@ class Miner(BasePollerFT):
             more = None
             tag_stack = collections.deque()
             try:
-                for action, element in etree.iterparse(result.raw, events=('start', 'end')):
+                for action, element in etree.iterparse(result.raw, events=('start', 'end'), recover=True):
                     if action == 'start':
                         tag_stack.append(element.tag)
 
@@ -321,8 +331,13 @@ class Miner(BasePollerFT):
 
                                 content = etree.tostring(c[0], encoding='unicode')
 
-                                for indicator in stix_decode(content):
+                                timestamp, indicators = stix_decode(content)
+                                for indicator in indicators:
                                     yield indicator
+
+                                if self.last_stix_package_ts is None or timestamp > self.last_stix_package_ts:
+                                    LOG.debug('{} - last package ts: {!r}'.format(self.name, timestamp))
+                                    self.last_stix_package_ts = timestamp
 
                         element.clear()
 
@@ -354,6 +369,8 @@ class Miner(BasePollerFT):
         cbegin = begin
         dt = timedelta(seconds=self.max_poll_dt)
 
+        self.last_stix_package_ts = None
+
         while cbegin < end:
             cend = min(end, cbegin+dt)
 
@@ -368,6 +385,8 @@ class Miner(BasePollerFT):
                 yield i
 
             self.last_taxii_run = dt_to_millisec(cend)
+            if self.last_stix_package_ts is not None:
+                self.last_taxii_run = self.last_stix_package_ts
 
             cbegin = cend
 

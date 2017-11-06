@@ -19,7 +19,7 @@ import os.path
 import json
 
 from unittest import TestCase
-from nose.tools import assert_items_equal
+from nose.tools import assert_items_equal, assert_equal
 from parameterized import parameterized
 
 import taxiing.stix
@@ -58,6 +58,13 @@ def test_stixdecoder(testfile):
         results = json.load(f)
 
     assert_items_equal(
-        taxiing.stix.decode(spackage),
+        taxiing.stix.decode(spackage)[1],
         results
+    )
+
+
+def test_parse_stix_timestamp():
+    assert_equal(
+        taxiing.stix._parse_stix_timestamp('2017-11-06T12:12:19.000000+00:00'),
+        1509970339000
     )

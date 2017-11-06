@@ -4,6 +4,11 @@ import uuid
 MESSAGE_BINDING = 'urn:taxii.mitre.org:message:xml:1.1'
 SERVICES = 'urn:taxii.mitre.org:services:1.1'
 
+PROTOCOLS = {
+    'http': 'urn:taxii.mitre.org:protocol:http:1.0',
+    'https': 'urn:taxii.mitre.org:protocol:https:1.0'
+}
+
 # 2014-12-19T00:00:00Z
 TAXII_DT_FORMAT = '%Y-%m-%dT%H:%M:%SZ'
 
@@ -77,6 +82,8 @@ def headers(content_type=None, accept=None, services=None, protocol=None):
 
     if protocol is None:
         protocol = 'urn:taxii.mitre.org:protocol:http:1.0'
+    if protocol in PROTOCOLS:
+        protocol = PROTOCOLS[protocol]
 
     return {
         'Content-Type': 'application/xml',

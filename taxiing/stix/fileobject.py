@@ -16,7 +16,7 @@ def _decode_basic_props(props):
     return result
 
 
-def decode(props):
+def decode(props, **kwargs):
     result = []
 
     bprops = _decode_basic_props(props)

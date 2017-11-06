@@ -1,4 +1,4 @@
-def decode(props):
+def decode(props, **kwargs):
     dtype = props.get('type', 'FQDN')
     if dtype != 'FQDN':
         return []

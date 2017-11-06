@@ -14,6 +14,9 @@ prototypes:
         indicator_types:
             - any
         config:
+            age_out:
+                sudden_death: false
+                default: last_seen+30d
             discovery_service:  http://hailataxii.com/taxii-discovery-service
             collection: guest.phishtank_com
             username: guest

@@ -1,4 +1,4 @@
-def decode(props):
+def decode(props, **kwargs):
     utype = props.get('type', 'URL')
     if utype == 'URL':
         type_ = 'URL'
