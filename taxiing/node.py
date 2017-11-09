@@ -384,7 +384,6 @@ class Miner(BasePollerFT):
             for i in result:
                 yield i
 
-            self.last_taxii_run = dt_to_millisec(cend)
             if self.last_stix_package_ts is not None:
                 self.last_taxii_run = self.last_stix_package_ts
 
@@ -402,10 +401,10 @@ class Miner(BasePollerFT):
         if last_run is None:
             last_run = now-(self.initial_interval*1000)
 
-        begin = datetime.fromtimestamp(last_run/1000)
+        begin = datetime.utcfromtimestamp(last_run/1000)
         begin = begin.replace(microsecond=0, tzinfo=pytz.UTC)
 
-        end = datetime.fromtimestamp(now/1000)
+        end = datetime.utcfromtimestamp(now/1000)
         end = end.replace(tzinfo=pytz.UTC)
 
         if self.lower_timestamp_precision:
