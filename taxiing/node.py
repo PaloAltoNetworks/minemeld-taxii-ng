@@ -10,7 +10,7 @@ import bs4  # we use bs4 to parse the HTML page
 from lxml import etree
 
 from minemeld.ft.basepoller import BasePollerFT
-from minemeld.ft.utils import dt_to_millisec, interval_in_sec
+from minemeld.ft.utils import interval_in_sec
 
 from .taxii import v11 as taxii11
 from .stix import decode as stix_decode
