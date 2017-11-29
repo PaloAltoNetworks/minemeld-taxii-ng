@@ -61,7 +61,7 @@ class Miner(BasePollerFT):
             '%s_side_config.yml' % self.name
         )
 
-        self.prefix = self.config.get('prefix', self.name)
+        self.prefix = self.config.get('prefix', None)
 
         self.confidence_map = self.config.get('confidence_map', {
             'low': 40,
@@ -124,7 +124,7 @@ class Miner(BasePollerFT):
         indicator = item.pop('indicator')
         value = {}
         for k, v in item.iteritems():
-            if k.startswith('stix_'):
+            if k.startswith('stix_') and self.prefix is not None:
                 k = self.prefix + k[4:]
             value[k] = v
 

@@ -33,4 +33,9 @@ def extract(package):
     if description is not None:
         result['stix_package_description'] = description.text
 
+    # decode description
+    sdescription = next((c for c in header[0] if c.name == 'Short_Description'), None)
+    if sdescription is not None:
+        result['stix_package_short_description'] = sdescription.text
+
     return result
