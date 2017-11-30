@@ -21,3 +21,23 @@ prototypes:
             collection: guest.phishtank_com
             username: guest
             password: guest
+    exampleDataFeed:
+        author: MineMeld Core Team
+        description: >
+            TAXII DataFeed reporting title, description and short_description
+            from the TAXII NG Miner
+        class: minemeld.ft.taxii.DataFeed
+        development_status: STABLE
+        node_type: output
+        tags: []
+        indicator_types:
+            - any
+        config:
+            attributes_package_title:
+                - stix_package_title
+                - stix_title
+            attributes_package_description:
+                - stix_package_description
+                - stix_description
+            attributes_package_short_description:
+                - stix_package_short_description
