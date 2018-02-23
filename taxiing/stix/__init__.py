@@ -21,6 +21,7 @@ EPOCH = datetime.datetime.utcfromtimestamp(0).replace(tzinfo=pytz.UTC)
 DECODERS = {
     'DomainNameObjectType': domainnameobject.decode,
     'FileObjectType': fileobject.decode,
+    'WindowsFileObjectType': fileobject.decode,
     'URIObjectType': uriobject.decode,
     'AddressObjectType': addressobject.decode
 }

@@ -3,6 +3,7 @@
         "indicator": "59978e6beae97264cb60ee88b5d4b1bd",
         "stix_package_title": "CERT-PA AgID - IPs WatchList",
         "type": "md5",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "The list contains IPs collected over the lastest 30 days by the web application. From any of these IP has been downloaded and analyzed a suspicious binary file. This list has been automatically generated The list is released without any warranty to the end users. For infos and support please contact CERT-PA: cert-pa@cert-pa.it.",
         "share_level": "green"
     },
@@ -10,6 +11,7 @@
         "indicator": "3a71181d560c5f2d91e3e9f97014c018",
         "stix_package_title": "CERT-PA AgID - IPs WatchList",
         "type": "md5",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "The list contains IPs collected over the lastest 30 days by the web application. From any of these IP has been downloaded and analyzed a suspicious binary file. This list has been automatically generated The list is released without any warranty to the end users. For infos and support please contact CERT-PA: cert-pa@cert-pa.it.",
         "share_level": "green"
     },
@@ -17,6 +19,7 @@
         "indicator": "38.130.218.117",
         "stix_package_title": "CERT-PA AgID - IPs WatchList",
         "type": "IPv4",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "The list contains IPs collected over the lastest 30 days by the web application. From any of these IP has been downloaded and analyzed a suspicious binary file. This list has been automatically generated The list is released without any warranty to the end users. For infos and support please contact CERT-PA: cert-pa@cert-pa.it.",
         "share_level": "green"
     }

@@ -5,6 +5,6 @@ def prototypes():
 
 
 def webui_blueprint():
-    from minemeld.flask import aaa
+    from minemeld.flask import aaa  # pylint: disable E0401
 
     return aaa.MMBlueprint('taxiingWebui', __name__, static_folder='webui', static_url_path='')

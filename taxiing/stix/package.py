@@ -38,4 +38,13 @@ def extract(package):
     if sdescription is not None:
         result['stix_package_short_description'] = sdescription.text
 
+    # decode identity name from information_source
+    information_source = next((c for c in header[0] if c.name == 'Information_Source'), None)
+    if information_source is not None:
+        identity = next((c for c in information_source if c.name == 'Identity'), None)
+        if identity is not None:
+            name = next((c for c in identity if c.name == 'Name'))
+            if name is not None:
+                result['stix_package_information_source'] = name.text
+
     return result

@@ -4,6 +4,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://www.online812.ru",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -11,6 +12,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://www.aica.co.jp",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -18,6 +20,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://185.149.120.3/scholargoogle/",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -25,6 +28,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://www.imer.ro",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -32,6 +36,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://an-crimea.ru",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -40,6 +45,7 @@
         "type": "md5",
         "share_level": "green",
         "stix_file_sha1": "de5c8d858e6e41da715dca1c019df0bfb92d32c0",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html",
         "indicator": "fbbdc39af1139aebba4da004475e8839",
         "stix_file_sha256": "630325cac09ac3fab908f903e3b00d0dadd5fdaa0875ed8496fcbb97a558d0da",
@@ -50,6 +56,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://1dnscontrol.com/flash_install.php",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -57,6 +64,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://www.sinematurk.com",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -64,6 +72,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://i24.com.ua",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -71,6 +80,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://argumentiru.com",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -78,6 +88,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://calendar.fontanka.ru",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -87,6 +98,7 @@
         "share_level": "green",
         "stix_file_sha1": "de5c8d858e6e41da715dca1c019df0bfb92d32c0",
         "stix_file_format": "PE32 executable (console) Intel 80386, for MS Windows",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html",
         "indicator": "630325cac09ac3fab908f903e3b00d0dadd5fdaa0875ed8496fcbb97a558d0da",
         "stix_file_name": "BadRabbit5.exe"
@@ -96,6 +108,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://185.149.120.3",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -103,6 +116,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://blog.fontanka.ru",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -110,6 +124,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://www.fontanka.ru",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -118,6 +133,7 @@
         "type": "sha1",
         "share_level": "green",
         "stix_file_format": "PE32 executable (console) Intel 80386, for MS Windows",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html",
         "indicator": "de5c8d858e6e41da715dca1c019df0bfb92d32c0",
         "stix_file_sha256": "630325cac09ac3fab908f903e3b00d0dadd5fdaa0875ed8496fcbb97a558d0da",
@@ -128,6 +144,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://www.otbrana.com",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -135,6 +152,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://argumenti.ru",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -142,6 +160,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://bg.pensionhotel.com",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -149,6 +168,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://www.pensionhotel.cz",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -156,6 +176,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://grupovo.bg",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -163,6 +184,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://ankerch-crimea.ru",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -170,6 +192,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://www.grupovo.bg",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -177,6 +200,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://www.t.ks.ua",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -184,6 +208,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://most-dnepr.info",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -191,6 +216,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://osvitaportal.com.ua",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -198,6 +224,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://spbvoditel.ru",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -205,6 +232,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://www.mediaport.ua",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     },
     {
@@ -212,6 +240,7 @@
         "type": "URL",
         "share_level": "green",
         "indicator": "http://novayagazeta.spb.ru",
+        "stix_package_information_source": "CERT-PA - AgID",
         "stix_package_description": "CERT-PA Analyzed file: BadRabbit5.exe - URL: https://infosec.cert-pa.it/analyze/fbbdc39af1139aebba4da004475e8839.html"
     }
 ]
