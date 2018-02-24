@@ -41,3 +41,5 @@ prototypes:
                 - stix_description
             attributes_package_short_description:
                 - stix_package_short_description
+            attributes_package_information_source:
+                - stix_package_information_source
