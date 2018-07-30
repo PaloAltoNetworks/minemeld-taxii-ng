@@ -30,6 +30,8 @@ def decode(props, ip_version_auto_detect=False, **kwargs):
         type_ = 'IPv4'
     elif acategory == 'ipv6-addr':
         type_ = 'IPv6'
+    elif acategory == 'e-mail':
+        type_ = 'email-addr'
     else:
         LOG.error('Unknown AddressObjectType category: {!r}'.format(acategory))
         return []

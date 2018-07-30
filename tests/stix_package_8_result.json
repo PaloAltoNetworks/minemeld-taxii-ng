@@ -1,0 +1,10 @@
+[
+    {
+        "indicator": "test@example.com",
+        "stix_package_title": "Email Address WatchList",
+        "type": "email-addr",
+        "stix_package_information_source": "Test",
+        "stix_package_description": "Sample email watchlist",
+        "share_level": "green"
+    }
+]
