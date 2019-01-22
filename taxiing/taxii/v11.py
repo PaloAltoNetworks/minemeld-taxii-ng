@@ -1,4 +1,8 @@
 import uuid
+import datetime
+
+import dateutil
+import pytz
 
 
 MESSAGE_BINDING = 'urn:taxii.mitre.org:message:xml:1.1'
@@ -12,6 +16,7 @@ PROTOCOLS = {
 # 2014-12-19T00:00:00Z
 TAXII_DT_FORMAT = '%Y-%m-%dT%H:%M:%SZ'
 
+EPOCH = datetime.datetime.utcfromtimestamp(0).replace(tzinfo=pytz.UTC)
 
 def new_message_id():
     return str(uuid.uuid4())
@@ -92,3 +97,16 @@ def headers(content_type=None, accept=None, services=None, protocol=None):
         'X-TAXII-Services': services,
         'X-TAXII-Protocol': protocol
     }
+
+
+def parse_timestamp_label(timestamp_label):
+    try:
+        dt = dateutil.parser.parse(timestamp_label)
+
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=pytz.UTC)
+        delta = dt - EPOCH
+        return int(delta.total_seconds()*1000)
+
+    except Exception as e:
+        return None

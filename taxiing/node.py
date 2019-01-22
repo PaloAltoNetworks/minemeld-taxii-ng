@@ -23,6 +23,7 @@ class Miner(BasePollerFT):
         self.discovered_poll_service = None
         self.last_taxii_run = None
         self.last_stix_package_ts = None
+        self.last_taxii_content_ts = None
         self.api_key = None
 
         super(Miner, self).__init__(name, chassis, config)
@@ -339,6 +340,15 @@ class Miner(BasePollerFT):
                                     LOG.debug('{} - last package ts: {!r}'.format(self.name, timestamp))
                                     self.last_stix_package_ts = timestamp
 
+                            elif c.tag.endswith('Timestamp_Label'):
+                                LOG.debug('{} - timestamp label: {!r}'.format(self.name, c.text))
+                                timestamp = taxii11.parse_timestamp_label(c.text)
+                                LOG.debug('{} - timestamp label: {!r}'.format(self.name, timestamp))
+
+                                if self.last_taxii_content_ts is None or timestamp > self.last_taxii_content_ts:
+                                    LOG.debug('{} - last content ts: {!r}'.format(self.name, timestamp))
+                                    self.last_taxii_content_ts = timestamp
+
                         element.clear()
 
             finally:
@@ -370,6 +380,7 @@ class Miner(BasePollerFT):
         dt = timedelta(seconds=self.max_poll_dt)
 
         self.last_stix_package_ts = None
+        self.last_taxii_content_ts = None
 
         while cbegin < end:
             cend = min(end, cbegin+dt)
@@ -384,8 +395,8 @@ class Miner(BasePollerFT):
             for i in result:
                 yield i
 
-            if self.last_stix_package_ts is not None:
-                self.last_taxii_run = self.last_stix_package_ts
+            if self.last_taxii_content_ts is not None:
+                self.last_taxii_run = self.last_taxii_content_ts
 
             cbegin = cend
 
