@@ -18,6 +18,7 @@ TAXII_DT_FORMAT = '%Y-%m-%dT%H:%M:%SZ'
 
 EPOCH = datetime.datetime.utcfromtimestamp(0).replace(tzinfo=pytz.UTC)
 
+
 def new_message_id():
     return str(uuid.uuid4())
 
@@ -50,8 +51,8 @@ def poll_request(
 
     result = [
         '<taxii_11:Poll_Request xmlns:taxii_11="http://taxii.mitre.org/messages/taxii_xml_binding-1.1"',
-            'message_id="{}"'.format(message_id),
-            'collection_name="{}"'.format(collection_name)
+        'message_id="{}"'.format(message_id),
+        'collection_name="{}"'.format(collection_name)
     ]
     if subscription_id is not None:
         result.append('subscription_id="{}"'.format(subscription_id))
@@ -108,5 +109,5 @@ def parse_timestamp_label(timestamp_label):
         delta = dt - EPOCH
         return int(delta.total_seconds()*1000)
 
-    except Exception as e:
+    except Exception:
         return None

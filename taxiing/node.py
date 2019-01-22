@@ -207,7 +207,8 @@ class Miner(BasePollerFT):
                 LOG.error(
                     '{} - Collection management service with no address: {!r}'.format(
                         self.name, coll_service
-                ))
+                    )
+                )
                 continue
             address = address.string
 
