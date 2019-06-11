@@ -1,6 +1,10 @@
 import json
+import logging
 
 from .. import parse_stix_timestamp
+
+
+LOG = logging.getLogger(__name__)
 
 
 TLP_MARKING_DEFINITIONS = {
@@ -36,7 +40,12 @@ def decode(content, **kwargs):
     indicators = []
     identities = {}
 
-    bundle = json.loads(content)
+    try:
+        bundle = json.loads(content)
+    except Exception as e:
+        LOG.exception('Error in decoding STIX2 Json')
+        return 0, []
+
     type_ = bundle.get("type", None)
     if not type_ or type_ != 'bundle':
         raise RuntimeError("Content is not a STIX2 bundle")
