@@ -1,0 +1,71 @@
+{
+    "spec_version": "2.0",
+    "objects": [
+      {
+        "valid_from": "2019-05-09T16:56:05.447484Z",
+        "created_by_ref": "identity--826b0ba5-ea91-47ed-ae19-328b87c903a4",
+        "external_references": [
+          {
+            "url": "https://infosec.cert-pa.it/analyze/cadced29b52992d8e82e238507714138.html",
+            "source_name": "Infosec",
+            "description": "Infosec analysis link"
+          },
+          {
+            "url": "https://www.virustotal.com/file/6ee5a026132fbf20932be5d24ce93def24632630a178939b1f75a583047cd7ee/analysis/1557380657",
+            "source_name": "VirusTotal",
+            "description": "VirusTotal analysis link"
+          }
+        ],
+        "created": "2019-05-09T16:56:05.447Z",
+        "pattern": "[file:hashes.'SHA-256' = '6ee5a026132fbf20932be5d24ce93def24632630a178939b1f75a583047cd7ee' OR file:hashes.MD5 = 'cadced29b52992d8e82e238507714138' OR file:hashes.SHA1 = '625b83299eac00f8ef02aa49f53e6807c3d927da' ]",
+        "labels": [
+          "malicious-activity",
+          "malscore:10",
+          "malfamily:Ponystealer",
+          "vt_detection_ratio:49/67"
+        ],
+        "modified": "2019-05-09T16:56:05.447Z",
+        "name": "MT103_Swift.exe",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--8bd84602-0119-4c75-9537-ecb146dc0387"
+      },
+      {
+        "valid_from": "2019-05-09T16:56:05.50623Z",
+        "created_by_ref": "identity--826b0ba5-ea91-47ed-ae19-328b87c903a4",
+        "name": "Source URLs of the file",
+        "created": "2019-05-09T16:56:05.506Z",
+        "pattern": "[url:value = 'https://iracan.ir/transferr/MT103_Swift.exe']",
+        "labels": [
+          "compromised"
+        ],
+        "modified": "2019-05-09T16:56:05.506Z",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--9da62c78-76e2-4430-acd9-981ba28fe8ea"
+      },
+      {
+        "created": "2019-05-09T16:56:05.446Z",
+        "modified": "2019-05-09T16:56:05.446Z",
+        "identity_class": "organization",
+        "type": "identity",
+        "id": "identity--826b0ba5-ea91-47ed-ae19-328b87c903a4",
+        "name": "CERT-PA @ AgID"
+      },
+      {
+        "definition": {
+          "tlp": "white"
+        },
+        "created": "2017-01-20T00:00:00.000Z",
+        "type": "marking-definition",
+        "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "definition_type": "tlp"
+      }
+    ],
+    "type": "bundle",
+    "id": "bundle--b89eed8b-704b-46e2-8ede-51d84c517512"
+}

@@ -22,6 +22,8 @@ from unittest import TestCase
 from nose.tools import assert_items_equal, assert_equal
 from parameterized import parameterized
 
+import taxiing.stix.v1
+import taxiing.stix.v2
 import taxiing.stix
 
 TestCase.maxDiff = None
@@ -66,7 +68,7 @@ def load_stix_v2_vectors():
     return [(os.path.join(MYDIR, testfile),) for testfile in testfiles]
 
 
-@parameterized(load_stix_v1_vectors)
+@parameterized(load_stix_v1_vectors, skip_on_empty=True)
 def test_stix_v1_decoder(testfile):
     with open(testfile, 'r') as f:
         spackage = f.read()
@@ -80,7 +82,7 @@ def test_stix_v1_decoder(testfile):
     )
 
 
-@parameterized(load_stix_v2_vectors)
+@parameterized(load_stix_v2_vectors, skip_on_empty=True)
 def test_stix_v2_decoder(testfile):
     with open(testfile, 'r') as f:
         spackage = f.read()
@@ -96,6 +98,6 @@ def test_stix_v2_decoder(testfile):
 
 def test_parse_stix_timestamp():
     assert_equal(
-        taxiing.stix.v1._parse_stix_timestamp('2017-11-06T12:12:19.000000+00:00'),
+        taxiing.stix.parse_stix_timestamp('2017-11-06T12:12:19.000000+00:00'),
         1509970339000
     )

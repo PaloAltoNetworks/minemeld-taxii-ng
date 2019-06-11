@@ -1,0 +1,33 @@
+[
+    {
+        "indicator": "[file:hashes.'SHA-256' = '6ee5a026132fbf20932be5d24ce93def24632630a178939b1f75a583047cd7ee' OR file:hashes.MD5 = 'cadced29b52992d8e82e238507714138' OR file:hashes.SHA1 = '625b83299eac00f8ef02aa49f53e6807c3d927da' ]",
+        "type": "stix2-pattern",
+        "first_seen": 1557420965447,
+        "stix2_created": 1557420965447,
+        "stix2_modified": 1557420965447,
+        "stix2_labels": [
+          "malicious-activity",
+          "malscore:10",
+          "malfamily:Ponystealer",
+          "vt_detection_ratio:49/67"
+        ],
+        "stix2_name": "MT103_Swift.exe",
+        "share_level": "white",
+        "stix2_id": "indicator--8bd84602-0119-4c75-9537-ecb146dc0387",
+        "stix2_created_by": "organization:CERT-PA @ AgID"
+    },
+    {
+        "indicator": "[url:value = 'https://iracan.ir/transferr/MT103_Swift.exe']",
+        "type": "stix2-pattern",
+        "first_seen": 1557420965506,
+        "stix2_created_by": "organization:CERT-PA @ AgID",
+        "stix2_name": "Source URLs of the file",
+        "stix2_created": 1557420965506,
+        "stix2_modified": 1557420965506,
+        "stix2_labels": [
+          "compromised"
+        ],
+        "share_level": "white",
+        "stix2_id": "indicator--9da62c78-76e2-4430-acd9-981ba28fe8ea"
+    }
+]

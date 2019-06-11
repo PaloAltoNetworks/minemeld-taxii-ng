@@ -12,10 +12,10 @@ from . import domainnameobject
 from . import fileobject
 from . import uriobject
 from . import addressobject
+from .. import parse_stix_timestamp
 
 
 LOG = logging.getLogger(__name__)
-EPOCH = datetime.datetime.utcfromtimestamp(0).replace(tzinfo=pytz.UTC)
 
 
 DECODERS = {
@@ -35,15 +35,6 @@ def object_extract_properties(props, kwargs):
         return []
 
     return DECODERS[type_](props, **kwargs)
-
-
-def _parse_stix_timestamp(stix_timestamp):
-    dt = dateutil.parser.parse(stix_timestamp)
-
-    if dt.tzinfo is None:
-        dt = dt.replace(tzinfo=pytz.UTC)
-    delta = dt - EPOCH
-    return int(delta.total_seconds()*1000)
 
 
 def _deduplicate(indicators):
@@ -68,7 +59,7 @@ def decode(content, **kwargs):
 
     timestamp = package.get('timestamp', None)
     if timestamp is not None:
-        timestamp = _parse_stix_timestamp(timestamp)
+        timestamp = parse_stix_timestamp(timestamp)
 
     pprops = package_extract_properties(package)
 

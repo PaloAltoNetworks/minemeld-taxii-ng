@@ -1,0 +1,637 @@
+{
+    "spec_version": "2.0",
+    "objects": [
+      {
+        "valid_from": "2019-05-09T16:38:36.213088Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "name": "dominiopruebacl.com",
+        "created": "2019-05-09T16:38:36.213Z",
+        "pattern": "[domain-name:value='dominiopruebacl.com']",
+        "labels": [
+          "compromised",
+          "malicious-activity"
+        ],
+        "modified": "2019-05-09T16:38:36.213Z",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--7c5d6cf7-2c26-48af-9443-d4c23d65277b"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.232335Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "external_references": [
+          {
+            "url": "http://infosec.cert-pa.it/analyze/81051bcc2cf1bedf378224b0a93e2877.html",
+            "source_name": "Infosec",
+            "description": "Infosec analysis link"
+          },
+          {
+            "url": "https://www.virustotal.com/file/7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6/analysis/1498119319",
+            "source_name": "VirusTotal",
+            "description": "VirusTotal analysis link"
+          }
+        ],
+        "created": "2019-05-09T16:38:36.232Z",
+        "pattern": "[file:hashes.MD5='81051bcc2cf1bedf378224b0a93e2877']",
+        "labels": [
+          "malicious-activity",
+          "malscore:9",
+          "vt_detection_ratio:0/54"
+        ],
+        "modified": "2019-05-09T16:38:36.232Z",
+        "name": "81051bcc2cf1bedf378224b0a93e2877",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--76049977-88cc-485f-81f5-78dedb71355c"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.242598Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "name": "s3-us-west-2.amazonaws.com",
+        "created": "2019-05-09T16:38:36.242Z",
+        "pattern": "[domain-name:value='s3-us-west-2.amazonaws.com']",
+        "labels": [
+          "compromised",
+          "malicious-activity"
+        ],
+        "modified": "2019-05-09T16:38:36.242Z",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--d01f8b6d-9baf-4966-88c5-aae462fdae74"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.244995Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "external_references": [
+          {
+            "url": "http://infosec.cert-pa.it/analyze/81bfb8f3bf26683ebb56448456d1141c.html",
+            "source_name": "Infosec",
+            "description": "Infosec analysis link"
+          },
+          {
+            "url": "https://www.virustotal.com/file/37f0c2bb29eaa07cb5c8649871062afe3c261caaf76c7b52d49b04a97a7262e8/analysis/1557380629",
+            "source_name": "VirusTotal",
+            "description": "VirusTotal analysis link"
+          }
+        ],
+        "created": "2019-05-09T16:38:36.244Z",
+        "pattern": "[file:hashes.MD5='81bfb8f3bf26683ebb56448456d1141c']",
+        "labels": [
+          "malicious-activity",
+          "malscore:10",
+          "vt_detection_ratio:45/72"
+        ],
+        "modified": "2019-05-09T16:38:36.244Z",
+        "name": "81bfb8f3bf26683ebb56448456d1141c",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--ea155e7f-92ac-4ae8-ab53-8b33a20a2227"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.246979Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "name": "rjxz-1253334198.file.myqcloud.com",
+        "created": "2019-05-09T16:38:36.246Z",
+        "pattern": "[domain-name:value='rjxz-1253334198.file.myqcloud.com']",
+        "labels": [
+          "compromised",
+          "malicious-activity"
+        ],
+        "modified": "2019-05-09T16:38:36.246Z",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--aaf664b3-0d8d-44b1-aa5d-f74c2b5c9949"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.249308Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "external_references": [
+          {
+            "url": "http://infosec.cert-pa.it/analyze/eb48c896e4923041852753fabad7e63d.html",
+            "source_name": "Infosec",
+            "description": "Infosec analysis link"
+          },
+          {
+            "url": "https://www.virustotal.com/file/52d5a74dd5d073245923a275beed4b12e4930307a59e38d871c9debaf64f6a80/analysis/1556533527",
+            "source_name": "VirusTotal",
+            "description": "VirusTotal analysis link"
+          }
+        ],
+        "created": "2019-05-09T16:38:36.249Z",
+        "pattern": "[file:hashes.MD5='eb48c896e4923041852753fabad7e63d']",
+        "labels": [
+          "malicious-activity",
+          "malscore:10",
+          "vt_detection_ratio:44/70"
+        ],
+        "modified": "2019-05-09T16:38:36.249Z",
+        "name": "eb48c896e4923041852753fabad7e63d",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--2fccace0-ed5d-46e6-87a4-0ac84f07d9c6"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.25128Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "external_references": [
+          {
+            "url": "http://infosec.cert-pa.it/analyze/ca8609e2f87a7e9e996f4d6408d9781d.html",
+            "source_name": "Infosec",
+            "description": "Infosec analysis link"
+          },
+          {
+            "url": "https://www.virustotal.com/file/b35ab1cec0ce8c66263d53e66a53681238786bcc2a657fc7fcfdf05b6467fc79/analysis/1552603784",
+            "source_name": "VirusTotal",
+            "description": "VirusTotal analysis link"
+          }
+        ],
+        "created": "2019-05-09T16:38:36.251Z",
+        "pattern": "[file:hashes.MD5='ca8609e2f87a7e9e996f4d6408d9781d']",
+        "labels": [
+          "malicious-activity",
+          "malscore:10",
+          "vt_detection_ratio:40/66"
+        ],
+        "modified": "2019-05-09T16:38:36.251Z",
+        "name": "ca8609e2f87a7e9e996f4d6408d9781d",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--ea9cca12-1011-40c3-bef6-ab9c9b4d1350"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.253323Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "external_references": [
+          {
+            "url": "http://infosec.cert-pa.it/analyze/042abccb55e03765d81cd4c6a7795428.html",
+            "source_name": "Infosec",
+            "description": "Infosec analysis link"
+          },
+          {
+            "url": "https://www.virustotal.com/file/0e6bc4c71181b8bae920375765a2dc2e22f6262300dd1530e9bec6db401072a9/analysis/1556965856",
+            "source_name": "VirusTotal",
+            "description": "VirusTotal analysis link"
+          }
+        ],
+        "created": "2019-05-09T16:38:36.253Z",
+        "pattern": "[file:hashes.MD5='042abccb55e03765d81cd4c6a7795428']",
+        "labels": [
+          "malicious-activity",
+          "malscore:10",
+          "vt_detection_ratio:9/72"
+        ],
+        "modified": "2019-05-09T16:38:36.253Z",
+        "name": "042abccb55e03765d81cd4c6a7795428",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--c5a5f413-792e-4682-9e03-92ec9e649b04"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.256038Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "name": "gx-10012947.file.myqcloud.com",
+        "created": "2019-05-09T16:38:36.256Z",
+        "pattern": "[domain-name:value='gx-10012947.file.myqcloud.com']",
+        "labels": [
+          "compromised",
+          "malicious-activity"
+        ],
+        "modified": "2019-05-09T16:38:36.256Z",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--030b1a97-24b7-4dc6-9bcd-f0ff777d340e"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.259616Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "external_references": [
+          {
+            "url": "http://infosec.cert-pa.it/analyze/a714f152846ced930cd445d8d6ce5d36.html",
+            "source_name": "Infosec",
+            "description": "Infosec analysis link"
+          },
+          {
+            "url": "https://www.virustotal.com/file/9c54cc621ff457e4189aa0eaf6b817e2572f5fa38f9b6bdf9334da95d130befc/analysis/1556441616",
+            "source_name": "VirusTotal",
+            "description": "VirusTotal analysis link"
+          }
+        ],
+        "created": "2019-05-09T16:38:36.259Z",
+        "pattern": "[file:hashes.MD5='a714f152846ced930cd445d8d6ce5d36']",
+        "labels": [
+          "malicious-activity",
+          "malscore:10",
+          "vt_detection_ratio:48/69"
+        ],
+        "modified": "2019-05-09T16:38:36.259Z",
+        "name": "a714f152846ced930cd445d8d6ce5d36",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--9aefe710-fbe8-4e8f-949e-a6081932220b"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.26336Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "name": "dl.1003b.56a.com",
+        "created": "2019-05-09T16:38:36.263Z",
+        "pattern": "[domain-name:value='dl.1003b.56a.com']",
+        "labels": [
+          "compromised",
+          "malicious-activity"
+        ],
+        "modified": "2019-05-09T16:38:36.263Z",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--28a914b4-6985-4353-8cd6-1cc809ba9d0a"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.265964Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "external_references": [
+          {
+            "url": "http://infosec.cert-pa.it/analyze/344aa4d373b9615377a8766383f122a9.html",
+            "source_name": "Infosec",
+            "description": "Infosec analysis link"
+          }
+        ],
+        "created": "2019-05-09T16:38:36.265Z",
+        "pattern": "[file:hashes.MD5='344aa4d373b9615377a8766383f122a9']",
+        "labels": [
+          "malicious-activity",
+          "malscore:2.6"
+        ],
+        "modified": "2019-05-09T16:38:36.265Z",
+        "name": "344aa4d373b9615377a8766383f122a9",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--4a8f199c-d80d-4628-a89f-db47dcfc1de0"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.269506Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "name": "iracan.ir",
+        "created": "2019-05-09T16:38:36.269Z",
+        "pattern": "[domain-name:value='iracan.ir']",
+        "labels": [
+          "compromised",
+          "malicious-activity"
+        ],
+        "modified": "2019-05-09T16:38:36.269Z",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--88f1593e-a599-4b03-8206-6f13289bee85"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.272416Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "external_references": [
+          {
+            "url": "http://infosec.cert-pa.it/analyze/cadced29b52992d8e82e238507714138.html",
+            "source_name": "Infosec",
+            "description": "Infosec analysis link"
+          },
+          {
+            "url": "https://www.virustotal.com/file/6ee5a026132fbf20932be5d24ce93def24632630a178939b1f75a583047cd7ee/analysis/1557380657",
+            "source_name": "VirusTotal",
+            "description": "VirusTotal analysis link"
+          }
+        ],
+        "created": "2019-05-09T16:38:36.272Z",
+        "pattern": "[file:hashes.MD5='cadced29b52992d8e82e238507714138']",
+        "labels": [
+          "malicious-activity",
+          "malscore:10",
+          "vt_detection_ratio:49/67"
+        ],
+        "modified": "2019-05-09T16:38:36.272Z",
+        "name": "cadced29b52992d8e82e238507714138",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--04c61678-7523-4763-97fe-085e0e248301"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.275761Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "name": "yuyu02004-10043918.file.myqcloud.com",
+        "created": "2019-05-09T16:38:36.275Z",
+        "pattern": "[domain-name:value='yuyu02004-10043918.file.myqcloud.com']",
+        "labels": [
+          "compromised",
+          "malicious-activity"
+        ],
+        "modified": "2019-05-09T16:38:36.275Z",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--251b2e87-f4bf-4d75-99ed-634f7c67b497"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.279023Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "external_references": [
+          {
+            "url": "http://infosec.cert-pa.it/analyze/6528a5daf9f63a1aa4d99cb344503fbd.html",
+            "source_name": "Infosec",
+            "description": "Infosec analysis link"
+          },
+          {
+            "url": "https://www.virustotal.com/file/fa63e8bddc4df15520b8bbe97f688854bfabccc436040dcd2e536a3ca76aa21d/analysis/1533156617",
+            "source_name": "VirusTotal",
+            "description": "VirusTotal analysis link"
+          }
+        ],
+        "created": "2019-05-09T16:38:36.279Z",
+        "pattern": "[file:hashes.MD5='6528a5daf9f63a1aa4d99cb344503fbd']",
+        "labels": [
+          "malicious-activity",
+          "malscore:10",
+          "vt_detection_ratio:49/68"
+        ],
+        "modified": "2019-05-09T16:38:36.279Z",
+        "name": "6528a5daf9f63a1aa4d99cb344503fbd",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--6eb5defc-f033-4578-ad8e-6600e550f125"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.282778Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "name": "jack4jobs.com",
+        "created": "2019-05-09T16:38:36.282Z",
+        "pattern": "[domain-name:value='jack4jobs.com']",
+        "labels": [
+          "compromised",
+          "malicious-activity"
+        ],
+        "modified": "2019-05-09T16:38:36.282Z",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--3939e298-192a-42b3-9377-dedff71126e0"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.286139Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "external_references": [
+          {
+            "url": "http://infosec.cert-pa.it/analyze/68b329da9893e34099c7d8ad5cb9c940.html",
+            "source_name": "Infosec",
+            "description": "Infosec analysis link"
+          },
+          {
+            "url": "https://www.virustotal.com/file/01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b/analysis/1499923779",
+            "source_name": "VirusTotal",
+            "description": "VirusTotal analysis link"
+          }
+        ],
+        "created": "2019-05-09T16:38:36.286Z",
+        "pattern": "[file:hashes.MD5='68b329da9893e34099c7d8ad5cb9c940']",
+        "labels": [
+          "malicious-activity",
+          "malscore:1.3",
+          "vt_detection_ratio:0/59"
+        ],
+        "modified": "2019-05-09T16:38:36.286Z",
+        "name": "68b329da9893e34099c7d8ad5cb9c940",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--2253fec4-4fb3-4015-9275-66f0eb3b5555"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.289559Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "name": "getcars.pk",
+        "created": "2019-05-09T16:38:36.289Z",
+        "pattern": "[domain-name:value='getcars.pk']",
+        "labels": [
+          "compromised",
+          "malicious-activity"
+        ],
+        "modified": "2019-05-09T16:38:36.289Z",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--0b438ee3-372c-4156-8e51-1f843e87265c"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.292139Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "external_references": [
+          {
+            "url": "http://infosec.cert-pa.it/analyze/6207ceae4841b2af7e10fc1e1e4490a8.html",
+            "source_name": "Infosec",
+            "description": "Infosec analysis link"
+          }
+        ],
+        "created": "2019-05-09T16:38:36.292Z",
+        "pattern": "[file:hashes.MD5='6207ceae4841b2af7e10fc1e1e4490a8']",
+        "labels": [
+          "malicious-activity",
+          "malscore:10"
+        ],
+        "modified": "2019-05-09T16:38:36.292Z",
+        "name": "6207ceae4841b2af7e10fc1e1e4490a8",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--8afbd6a5-aa46-4d37-8de7-b345fd0327fb"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.295336Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "name": "akowa.projet-test.com",
+        "created": "2019-05-09T16:38:36.295Z",
+        "pattern": "[domain-name:value='akowa.projet-test.com']",
+        "labels": [
+          "compromised",
+          "malicious-activity"
+        ],
+        "modified": "2019-05-09T16:38:36.295Z",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--880ec5f5-7b40-4385-97e4-cd4d1e017558"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.298057Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "external_references": [
+          {
+            "url": "http://infosec.cert-pa.it/analyze/dbb32da9fbeafbcdff426f120e9ac891.html",
+            "source_name": "Infosec",
+            "description": "Infosec analysis link"
+          },
+          {
+            "url": "https://www.virustotal.com/file/b62c30f041714f620fbfded6fbec04d4246a8963ed9341f93672d7bd8783710e/analysis/1556910689",
+            "source_name": "VirusTotal",
+            "description": "VirusTotal analysis link"
+          }
+        ],
+        "created": "2019-05-09T16:38:36.298Z",
+        "pattern": "[file:hashes.MD5='dbb32da9fbeafbcdff426f120e9ac891']",
+        "labels": [
+          "malicious-activity",
+          "malscore:10",
+          "vt_detection_ratio:49/69"
+        ],
+        "modified": "2019-05-09T16:38:36.298Z",
+        "name": "dbb32da9fbeafbcdff426f120e9ac891",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--9fe1822a-916d-4f32-8c48-72cf3e0f42b2"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.301738Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "name": "zahiretnadia.free.fr",
+        "created": "2019-05-09T16:38:36.301Z",
+        "pattern": "[domain-name:value='zahiretnadia.free.fr']",
+        "labels": [
+          "compromised",
+          "malicious-activity"
+        ],
+        "modified": "2019-05-09T16:38:36.301Z",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--f823166f-2df9-49c2-b885-256883c7f38d"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.305061Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "external_references": [
+          {
+            "url": "http://infosec.cert-pa.it/analyze/6151418f5f4fa8d16175a282a2004636.html",
+            "source_name": "Infosec",
+            "description": "Infosec analysis link"
+          },
+          {
+            "url": "https://www.virustotal.com/file/5ce1dd6991ff349e093ab17b666a7df1b0d9230ab2e1a43a5182b1a3e41026e8/analysis/1557220285",
+            "source_name": "VirusTotal",
+            "description": "VirusTotal analysis link"
+          }
+        ],
+        "created": "2019-05-09T16:38:36.305Z",
+        "pattern": "[file:hashes.MD5='6151418f5f4fa8d16175a282a2004636']",
+        "labels": [
+          "malicious-activity",
+          "malscore:10",
+          "vt_detection_ratio:47/71"
+        ],
+        "modified": "2019-05-09T16:38:36.305Z",
+        "name": "6151418f5f4fa8d16175a282a2004636",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--9f9950f3-5d76-4b95-8b05-605abaf092ae"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.308391Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "name": "tappapp.co.za",
+        "created": "2019-05-09T16:38:36.308Z",
+        "pattern": "[domain-name:value='tappapp.co.za']",
+        "labels": [
+          "compromised",
+          "malicious-activity"
+        ],
+        "modified": "2019-05-09T16:38:36.308Z",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--5ed04416-5528-4117-8ba7-bb4d8c062fe9"
+      },
+      {
+        "valid_from": "2019-05-09T16:38:36.311425Z",
+        "created_by_ref": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "external_references": [
+          {
+            "url": "http://infosec.cert-pa.it/analyze/653fafe3dc9b1fe7752c9c3663389290.html",
+            "source_name": "Infosec",
+            "description": "Infosec analysis link"
+          },
+          {
+            "url": "https://www.virustotal.com/file/4ecb339849b1ef92965c56b255fe8d1cc2a207d921a353fd7251557bbe805c5a/analysis/1556850539",
+            "source_name": "VirusTotal",
+            "description": "VirusTotal analysis link"
+          }
+        ],
+        "created": "2019-05-09T16:38:36.311Z",
+        "pattern": "[file:hashes.MD5='653fafe3dc9b1fe7752c9c3663389290']",
+        "labels": [
+          "malicious-activity",
+          "malscore:10",
+          "vt_detection_ratio:42/61"
+        ],
+        "modified": "2019-05-09T16:38:36.311Z",
+        "name": "653fafe3dc9b1fe7752c9c3663389290",
+        "object_marking_refs": [
+          "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+        ],
+        "type": "indicator",
+        "id": "indicator--13e6ee69-ca97-4c89-8915-06e4c65c3f13"
+      },
+      {
+        "created": "2019-05-09T16:38:36.212Z",
+        "modified": "2019-05-09T16:38:36.212Z",
+        "identity_class": "organization",
+        "type": "identity",
+        "id": "identity--8571541e-a73e-45db-b530-00f65df3bcee",
+        "name": "CERT-PA @ AgID"
+      },
+      {
+        "definition": {
+          "tlp": "white"
+        },
+        "created": "2017-01-20T00:00:00.000Z",
+        "type": "marking-definition",
+        "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "definition_type": "tlp"
+      }
+    ],
+    "type": "bundle",
+    "id": "bundle--4cefa2ea-fb2a-4fa6-b198-d01297c82e33"
+  }
+  
