@@ -32,7 +32,7 @@ def stix_results_file(fname):
     return fname.rsplit('.', 1)[0]+'_result.json'
 
 
-def load_stix_vectors():
+def load_stix_v1_vectors():
     testfiles = os.listdir(MYDIR)
     testfiles = filter(
         lambda x: x.startswith('stix_package_'),
@@ -49,8 +49,25 @@ def load_stix_vectors():
     return [(os.path.join(MYDIR, testfile),) for testfile in testfiles]
 
 
-@parameterized(load_stix_vectors)
-def test_stixdecoder(testfile):
+def load_stix_v2_vectors():
+    testfiles = os.listdir(MYDIR)
+    testfiles = filter(
+        lambda x: x.startswith('stix_v2_package_'),
+        testfiles
+    )
+
+    testfiles = filter(
+        lambda x: os.path.isfile(os.path.join(MYDIR, stix_results_file(x))),
+        testfiles
+    )
+
+    print 'Loaded {} STIX v2 test packages'.format(len(testfiles))
+
+    return [(os.path.join(MYDIR, testfile),) for testfile in testfiles]
+
+
+@parameterized(load_stix_v1_vectors)
+def test_stix_v1_decoder(testfile):
     with open(testfile, 'r') as f:
         spackage = f.read()
 
@@ -58,13 +75,27 @@ def test_stixdecoder(testfile):
         results = json.load(f)
 
     assert_items_equal(
-        taxiing.stix.decode(spackage)[1],
+        taxiing.stix.v1.decode(spackage)[1],
+        results
+    )
+
+
+@parameterized(load_stix_v2_vectors)
+def test_stix_v2_decoder(testfile):
+    with open(testfile, 'r') as f:
+        spackage = f.read()
+
+    with open(stix_results_file(testfile)) as f:
+        results = json.load(f)
+
+    assert_items_equal(
+        taxiing.stix.v2.decode(spackage)[1],
         results
     )
 
 
 def test_parse_stix_timestamp():
     assert_equal(
-        taxiing.stix._parse_stix_timestamp('2017-11-06T12:12:19.000000+00:00'),
+        taxiing.stix.v1._parse_stix_timestamp('2017-11-06T12:12:19.000000+00:00'),
         1509970339000
     )

@@ -13,7 +13,8 @@ from minemeld.ft.basepoller import BasePollerFT
 from minemeld.ft.utils import interval_in_sec
 
 from .taxii import v11 as taxii11
-from .stix import decode as stix_decode
+from .stix.v1 import decode as stix1_decode
+from .stix.v2 import decode as stix2_decode
 
 LOG = logging.getLogger(__name__)
 
@@ -325,15 +326,29 @@ class Miner(BasePollerFT):
                             result_part_number = int(result_part_number)
 
                     elif action == 'end' and element.tag.endswith('Content_Block') and len(tag_stack) == 1:
+                        binding_id = None
+                        content_binding = next((c for c in element if c.tag.endswith('Content_Binding')), None)
+                        if content_binding is not None:
+                            binding_id = content_binding.get('binding_id')
+
                         for c in element:
                             if c.tag.endswith('Content'):
-                                if len(c) == 0:
-                                    LOG.error('{} - Content with no children'.format(self.name))
-                                    continue
+                                if binding_id == 'urn:stix.mitre.org:json:2.0':
+                                    # STIX2 in TAXII1 - weird
+                                    content = c.text
+                                    LOG.debug(content)
 
-                                content = etree.tostring(c[0], encoding='unicode')
+                                    timestamp, indicators = stix2_decode(content)
 
-                                timestamp, indicators = stix_decode(content)
+                                else:
+                                    if len(c) == 0:
+                                        LOG.error('{} - Content with no children'.format(self.name))
+                                        continue
+
+                                    content = etree.tostring(c[0], encoding='unicode')
+
+                                    timestamp, indicators = stix1_decode(content)
+
                                 for indicator in indicators:
                                     yield indicator
 
