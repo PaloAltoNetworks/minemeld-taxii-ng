@@ -111,3 +111,26 @@ def parse_timestamp_label(timestamp_label):
 
     except Exception:
         return None
+
+
+def poll_response_header(in_response_to, cname, content_binding):
+    message_id = str(uuid.uuid4())
+
+    return """<taxii_11:Poll_Response
+        xmlns:taxii="http://taxii.mitre.org/messages/taxii_xml_binding-1"
+        xmlns:taxii_11="http://taxii.mitre.org/messages/taxii_xml_binding-1.1"
+        message_id="%(message_id)s"
+        in_response_to="%(in_response_to)s"
+        collection_name="%(collection_name)s" more="false" result_part_number="1">
+            <taxii_11:Content_Block>
+                <taxii_11:Content_Binding binding_id="%(content_binding)s"/>
+                    <taxii_11:Content>
+    """%{
+        "message_id": message_id,
+        "in_response_to": in_response_to,
+        "collection_name": cname,
+        "content_binding": content_binding
+    }
+
+def poll_response_footer():
+    return "</taxii_11:Content></taxii_11:Content_Block></taxii_11:Poll_Response>"

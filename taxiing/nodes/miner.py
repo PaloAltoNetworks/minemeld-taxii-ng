@@ -12,9 +12,9 @@ from lxml import etree
 from minemeld.ft.basepoller import BasePollerFT
 from minemeld.ft.utils import interval_in_sec
 
-from .taxii import v11 as taxii11
-from .stix.v1 import decode as stix1_decode
-from .stix.v2 import decode as stix2_decode
+from ..taxii import v11 as taxii11
+from ..stix.v1 import decode as stix1_decode
+from ..stix.v2 import decode as stix2_decode
 
 LOG = logging.getLogger(__name__)
 

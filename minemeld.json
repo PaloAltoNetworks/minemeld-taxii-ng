@@ -6,13 +6,16 @@
     "description": "MineMeld NG Miner for TAXII feeds",
     "entry_points": {
         "minemeld_nodes": {
-            "taxiing.Miner": "taxiing.node:Miner"
+            "taxiing.Miner": "taxiing.nodes:Miner"
         },
         "minemeld_prototypes": {
             "taxiing.prototypes": "taxiing:prototypes"
         },
         "minemeld_webui": {
             "taxiingWebui": "taxiing:webui_blueprint"
+        },
+        "minemeld_api": {
+            "taxiing": "taxiing.api:blueprint"
         }
     },
     "manifest_version": 0
