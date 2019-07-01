@@ -49,7 +49,7 @@ def _indicator_to_pattern(indicator, type_):
     if stix2_pattern is None:
         raise RuntimeError('Unhandled type {!r}'.format(type_))
 
-    return "{} = '{}'".format(stix2_pattern, indicator)
+    return "[{} = '{}']".format(stix2_pattern, indicator)
 
 
 def _get_name(indicator, type_, value):
