@@ -1,5 +1,6 @@
 import uuid
 import cStringIO
+from datetime import datetime
 import ujson as json
 
 from collections import defaultdict
@@ -20,6 +21,14 @@ import taxiing.stix.v2
 
 
 FEED_INTERVAL = 100
+
+
+def now_stix2_timestamp():
+    # YYYY-MM-DDTHH:mm:ss.sssZ
+    dtnow = datetime.utcnow()
+    result = dtnow.strftime('%Y-%m-%dT%H:%M:%S')
+    result = result+('.{:03d}Z'.format(int(dtnow.microsecond/1000)))
+    return result
 
 
 def get_ioc_property(feedname):
@@ -59,7 +68,7 @@ def stix2_bundle_formatter(feedname):
             ('minemeld/{}/{}'.format(feedname, score)).encode('ascii', 'ignore')
         ))
 
-    yield '{{\n"type": "bundle",\n"spec_version": "2.0",\n"id": "bundle--{}",\n"indicators": [\n'.format(bundle_id)
+    yield '{{\n"type": "bundle",\n"spec_version": "2.0",\n"id": "bundle--{}",\n"objects": [\n'.format(bundle_id)
 
     start = 0
     num = (1 << 32) - 1
@@ -128,10 +137,12 @@ def stix2_bundle_formatter(feedname):
         identity_class, name = identity.split(':', 1)
         result.write(',')
         result.write(json.dumps({
-            'type': 'identty',
+            'type': 'identity',
             'id': 'identity--'+str(uuid_),
             'name': name,
-            'identity_class': identity_class
+            'identity_class': identity_class,
+            'created': now_stix2_timestamp(),
+            'modified': now_stix2_timestamp()
         }))
     yield result.getvalue()
     result.close()

@@ -110,6 +110,13 @@ def _additional_properties(indicator, type_, value):
     return result
 
 
+def _to_stix2_timestamp(dt):
+    # YYYY-MM-DDTHH:mm:ss.sssZ
+    result = dt.strftime('%Y-%m-%dT%H:%M:%S')
+    result = result+('.{:03d}Z'.format(int(dt.microsecond/1000)))
+    return result
+
+
 def encode(indicator, value):
     type_ = value.get('type', None)
     if type_ is None:
@@ -125,15 +132,15 @@ def encode(indicator, value):
     
     last_seen = value.get('last_seen', None)
     if last_seen is not None:
-        result['modified'] = datetime.utcfromtimestamp(last_seen/1000).isoformat()+'Z'
+        result['modified'] = _to_stix2_timestamp(datetime.utcfromtimestamp(last_seen/1000))
 
     first_seen = value.get('first_seen', None)
     if first_seen is not None:
-        first_seen = datetime.utcfromtimestamp(last_seen/1000).isoformat()+'Z'
+        first_seen = _to_stix2_timestamp(datetime.utcfromtimestamp(last_seen/1000))
         result['valid_from'] = first_seen
         result['created'] = first_seen
     else:
-        result['valid_from'] = datetime.utcnow().isoformat()+'Z'
+        result['valid_from'] = _to_stix2_timestamp(datetime.utcnow())
 
     share_level = value.get('share_level', None)
     if share_level is not None and share_level in TLP_MARKING_DEFINITIONS:
