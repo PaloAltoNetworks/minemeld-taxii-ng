@@ -15,8 +15,8 @@
 import uuid
 import cStringIO
 from collections import defaultdict
+import json
 
-import ujson as json
 from flask import stream_with_context, Response
 from flask_login import current_user
 from netaddr import IPRange, AddrFormatError
@@ -122,7 +122,7 @@ def response_formatter(feedname, objectid='', manifest=False):
                     result.write(',')
                 firstelement = False
 
-                result.write(json.dumps(converted, escape_forward_slashes=False))
+                result.write(json.dumps(converted))
 
         yield result.getvalue()
 
