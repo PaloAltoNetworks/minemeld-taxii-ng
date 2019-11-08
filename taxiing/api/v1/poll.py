@@ -1,7 +1,8 @@
 import uuid
 import cStringIO
+import json
+from xml.sax.saxutils import escape
 from datetime import datetime
-import ujson as json
 
 from collections import defaultdict
 
@@ -120,7 +121,7 @@ def stix2_bundle_formatter(feedname):
                     result.write(',')
                 firstelement = False
 
-                result.write(json.dumps(converted, escape_forward_slashes=False))
+                result.write(json.dumps(converted))
 
         yield result.getvalue()
 
@@ -156,7 +157,7 @@ def data_feed_11(rmsgid, cname):
         yield taxiing.taxii.v11.poll_response_header(rmsgid, cname, 'urn:stix.mitre.org:json:2.0')
 
         for l in stix2_bundle_formatter(cname):
-            yield l
+            yield escape(l)
 
         # yield the closing tag
         yield taxiing.taxii.v11.poll_response_footer()
