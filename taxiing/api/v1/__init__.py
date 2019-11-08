@@ -1,1 +1,1 @@
-from .poll import poll
+from .poll import poll  # noqa

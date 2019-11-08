@@ -1,2 +1,2 @@
-from .decode import decode
-from .encode import encode
+from .decode import decode  # noqa
+from .encode import encode  # noqa

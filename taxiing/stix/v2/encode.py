@@ -60,14 +60,6 @@ def _get_name(indicator, type_, value):
     return '{} indicator: {}'.format(type_, indicator)
 
 
-def _get_name(indicator, type_, value):
-    result = value.get('stix2_name', None)
-    if result is not None:
-        return result
-
-    return '{} indicator: {}'.format(type_, indicator)
-
-
 def _get_description(indicator, type_, value):
     result = value.get('stix2_description', None)
     if result is not None:
@@ -129,7 +121,7 @@ def encode(indicator, value):
         'id': _get_id(indicator, type_, value),
         'pattern': _indicator_to_pattern(indicator, type_)
     }
-    
+
     last_seen = value.get('last_seen', None)
     if last_seen is not None:
         result['modified'] = _to_stix2_timestamp(datetime.utcfromtimestamp(last_seen/1000))

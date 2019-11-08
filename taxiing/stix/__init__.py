@@ -5,6 +5,7 @@ import dateutil.parser
 
 EPOCH = datetime.datetime.utcfromtimestamp(0).replace(tzinfo=pytz.UTC)
 
+
 def parse_stix_timestamp(stix_timestamp):
     dt = dateutil.parser.parse(stix_timestamp)
 

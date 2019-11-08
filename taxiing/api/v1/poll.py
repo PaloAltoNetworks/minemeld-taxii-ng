@@ -199,7 +199,7 @@ def poll():
 
         cname = tm.get('collection_name', None)
         message_id = tm.get('message_id', None)
-        taxii_version = '1.1'
+        # taxii_version = '1.1'
 
     elif taxiict == 'urn:taxii.mitre.org:message:xml:1.0':
         return 'Not Supported', 400

@@ -14,6 +14,8 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
+from __future__ import print_function
+
 import os
 import os.path
 import json
@@ -34,21 +36,8 @@ def stix_results_file(fname):
     return fname.rsplit('.', 1)[0]+'_result.json'
 
 
-def load_stix_v1_vectors():
-    testfiles = os.listdir(MYDIR)
-    testfiles = filter(
-        lambda x: x.startswith('stix_package_'),
-        testfiles
-    )
-
-    testfiles = filter(
-        lambda x: os.path.isfile(os.path.join(MYDIR, stix_results_file(x))),
-        testfiles
-    )
-
-    print 'Loaded {} STIX test packages'.format(len(testfiles))
-
-    return [(os.path.join(MYDIR, testfile),) for testfile in testfiles]
+def has_result_file(tname):
+    return os.path.isfile(os.path.join(MYDIR, stix_results_file(tname)))
 
 
 def load_stix_v2_vectors():
@@ -59,11 +48,28 @@ def load_stix_v2_vectors():
     )
 
     testfiles = filter(
-        lambda x: os.path.isfile(os.path.join(MYDIR, stix_results_file(x))),
+        has_result_file,
         testfiles
     )
 
-    print 'Loaded {} STIX v2 test packages'.format(len(testfiles))
+    print("Loaded {} STIX v2 Test packages".format(len(testfiles)))
+
+    return [(os.path.join(MYDIR, testfile),) for testfile in testfiles]
+
+
+def load_stix_v1_vectors():
+    testfiles = os.listdir(MYDIR)
+    testfiles = filter(
+        lambda x: x.startswith('stix_package_'),
+        testfiles
+    )
+
+    testfiles = filter(
+        has_result_file,
+        testfiles
+    )
+
+    print('Loaded {} STIX test packages'.format(len(testfiles)))
 
     return [(os.path.join(MYDIR, testfile),) for testfile in testfiles]
 
@@ -87,8 +93,22 @@ def test_stix_v2_decoder(testfile):
     with open(testfile, 'r') as f:
         spackage = f.read()
 
-    with open(stix_results_file(testfile)) as f:
-        results = json.load(f)
+    try:
+        with open(stix_results_file(testfile)) as f:
+            results = json.load(f)
+
+    except IOError:
+        print('Creating {}...'.format(stix_results_file(testfile)))
+        with open(stix_results_file(testfile), 'w+') as f:
+            json.dump(
+                taxiing.stix.v2.decode(spackage)[1],
+                f,
+                indent=4,
+                sort_keys=True
+            )
+
+        with open(stix_results_file(testfile)) as f:
+            results = json.load(f)
 
     assert_items_equal(
         taxiing.stix.v2.decode(spackage)[1],

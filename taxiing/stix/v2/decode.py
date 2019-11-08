@@ -35,6 +35,7 @@ _stix2_attr_tansforms = {
     'object_marking_refs': ('share_level', stix2_tlp)
 }
 
+
 def decode(content, **kwargs):
     latest_timestamp = 0
     indicators = []
@@ -42,7 +43,7 @@ def decode(content, **kwargs):
 
     try:
         bundle = json.loads(content)
-    except Exception as e:
+    except Exception:
         LOG.exception('Error in decoding STIX2 Json')
         return 0, []
 
@@ -56,7 +57,7 @@ def decode(content, **kwargs):
 
         if type_ is None:
             continue
-        
+
         if type_ == 'identity':
             identities[o['id']] = '{}:{}'.format(
                 o.get('identity_class', 'unknown'),

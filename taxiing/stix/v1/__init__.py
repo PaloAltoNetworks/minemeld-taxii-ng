@@ -1,8 +1,5 @@
 import logging
-import datetime
 
-import pytz
-import dateutil.parser
 from bs4 import BeautifulSoup
 
 from .package import extract as package_extract_properties
