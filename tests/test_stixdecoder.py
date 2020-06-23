@@ -83,7 +83,11 @@ def test_stix_v1_decoder(testfile):
         results = json.load(f)
 
     assert_items_equal(
-        taxiing.stix.v1.decode(spackage)[1],
+        taxiing.stix.v1.decode(spackage, confidence_map={
+            'low': 40,
+            'medium': 60,
+            'high': 80
+        })[1],
         results
     )
 

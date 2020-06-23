@@ -1,4 +1,6 @@
 import logging
+import datetime
+import re
 
 from bs4 import BeautifulSoup
 
@@ -24,6 +26,9 @@ DECODERS = {
 }
 
 
+TLP_REGEX = re.compile("TLPMarkingStructureType")
+
+
 def object_extract_properties(props, kwargs):
     type_ = props.get('xsi:type').rsplit(':')[-1]
 
@@ -43,8 +48,47 @@ def _deduplicate(indicators):
     return result.values()
 
 
+def decode_observable(observable, props, kwargs):
+    result = []
+
+    gprops = observable_extract_properties(observable)
+
+    obj = next((ob for ob in observable if ob.name == 'Object'), None)
+    if obj is None:
+        return result
+
+    # main properties
+    properties = next((c for c in obj if c.name == 'Properties'), None)
+    if properties is not None:
+        for r in object_extract_properties(properties, kwargs):
+            r.update(gprops)
+            r.update(props)
+
+            result.append(r)
+
+    # then related objects
+    related = next((c for c in obj if c.name == 'Related_Objects'), None)
+    if related is not None:
+        for robj in related:
+            if robj.name != 'Related_Object':
+                continue
+
+            properties = next((c for c in robj if c.name == 'Properties'), None)
+            if properties is None:
+                continue
+
+            for r in object_extract_properties(properties, kwargs):
+                r.update(gprops)
+                r.update(props)
+                result.append(r)
+
+    return result
+
+
 def decode(content, **kwargs):
     result = []
+    seen_observables = set([])
+    confidence_map = kwargs.get('confidence_map', None)
 
     package = BeautifulSoup(content, 'xml')
 
@@ -60,37 +104,47 @@ def decode(content, **kwargs):
 
     pprops = package_extract_properties(package)
 
-    observables = package.find_all('Observable')
-    for o in observables:
-        gprops = observable_extract_properties(o)
+    indicators = package.find_all('Indicator')
+    for i in indicators:
+        iprops = {}
+        iprops.update(pprops)
 
-        obj = next((ob for ob in o if ob.name == 'Object'), None)
-        if obj is None:
-            continue
+        handling = i.find('Handling', recursive=False)
+        if handling is not None:
+            marking_structure = handling.find(
+                'Marking_Structure',
+                attrs={"xsi:type": TLP_REGEX}
+            )
+            tlp = marking_structure.get('color')
+            if tlp is not None:
+                iprops['share_level'] = tlp.lower()
 
-        # main properties
-        properties = next((c for c in obj if c.name == 'Properties'), None)
-        if properties is not None:
-            for r in object_extract_properties(properties, kwargs):
-                r.update(gprops)
-                r.update(pprops)
+        if confidence_map is not None:
+            confidence = i.find('Confidence', recursive=False)
+            if confidence is not None:
+                value = confidence.find('Value')
+                if value is not None and value.string.lower() in confidence_map:
+                    iprops['confidence'] = confidence_map[value.string.lower()]
 
-                result.append(r)
+        observables = i.find_all('Observable')
+        for o in observables:
+            oid = o.get('id')
+            if not oid or oid in seen_observables:
+                continue
 
-        # then related objects
-        related = next((c for c in obj if c.name == 'Related_Objects'), None)
-        if related is not None:
-            for robj in related:
-                if robj.name != 'Related_Object':
-                    continue
+            observable_result = decode_observable(o, iprops, kwargs)
+            result.extend(observable_result)
+            seen_observables.add(oid)
 
-                properties = next((c for c in robj if c.name == 'Properties'), None)
-                if properties is None:
-                    continue
+    else:
+        observables = package.find_all('Observable')
+        for o in observables:
+            oid = o.get('id')
+            if not oid or oid in seen_observables:
+                continue
 
-                for r in object_extract_properties(properties, kwargs):
-                    r.update(gprops)
-                    r.update(pprops)
-                    result.append(r)
+            observable_result = decode_observable(o, pprops, kwargs)
+            result.extend(observable_result)
+            seen_observables.add(oid)
 
     return timestamp, _deduplicate(result)

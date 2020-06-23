@@ -49,9 +49,6 @@ class Miner(BasePollerFT):
         )
 
         # options for processing
-        self.ip_version_auto_detect = self.config.get('ip_version_auto_detect', True)
-        self.ignore_composition_operator = self.config.get('ignore_composition_operator', False)
-        self.create_fake_indicator = self.config.get('create_fake_indicator', False)
         self.lower_timestamp_precision = self.config.get('lower_timestamp_precision', False)
 
         self.discovery_service = self.config.get('discovery_service', None)
@@ -296,6 +293,7 @@ class Miner(BasePollerFT):
             data=req,
             stream=True
         )
+        result.raw.decode_content = True
 
         while True:
             result_part_number = None
@@ -347,7 +345,10 @@ class Miner(BasePollerFT):
 
                                     content = etree.tostring(c[0], encoding='unicode')
 
-                                    timestamp, indicators = stix1_decode(content)
+                                    timestamp, indicators = stix1_decode(
+                                        content,
+                                        confidence_map=self.confidence_map
+                                    )
 
                                 for indicator in indicators:
                                     yield indicator
