@@ -298,7 +298,7 @@ angular.module('taxiingWebui', [])
         });
     }])
     .run(['NodeDetailResolver', '$state', function(NodeDetailResolver, $state) {
-        NodeDetailResolver.registerClass('taxiing.node.Miner', {
+        NodeDetailResolver.registerClass('taxiing.nodes.miner.Miner', {
             tabs: [{
                 icon: 'fa fa-circle-o',
                 tooltip: 'INFO',
